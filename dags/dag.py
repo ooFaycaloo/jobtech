@@ -21,17 +21,17 @@ logging.basicConfig(level=logging.INFO)
 
 urls = [
     "https://www.glassdoor.fr/Emploi/france-data-emplois-SRCH_IL.0,6_IN86_KO7,11.htm",
-    "https://www.glassdoor.fr/Emploi/france-developer-emplois-SRCH_IL.0,6_IN86_KO7,13.htm",
-    "https://www.glassdoor.fr/Emploi/france-tech-emplois-SRCH_IL.0,6_IN86_KO7,24.htm",
-    "https://www.glassdoor.fr/Emploi/allemagne-data-emplois-SRCH_IL.0,6_IN86_KO7,11.htm",
-    "https://www.glassdoor.fr/Emploi/allemagne-developer-emplois-SRCH_IL.0,6_IN86_KO7,13.htm",
+    "https://www.glassdoor.fr/Emploi/france-developer-emplois-SRCH_IL.0,6_IN86_KO7,16.htm",
+    "https://www.glassdoor.fr/Emploi/france-tech-emplois-SRCH_IL.0,6_IN86_KO7,11.htm",
+    "https://www.glassdoor.fr/Emploi/allemagne-data-emplois-SRCH_IL.0,9_IN96_KO10,14.htm",
+    "https://www.glassdoor.fr/Emploi/allemagne-developer-emplois-SRCH_IL.0,9_IN96_KO10,19.htm",
     "https://www.glassdoor.fr/Emploi/allemagne-tech-emplois-SRCH_IL.0,6_IN86_KO7,24.htm",
-    "https://www.glassdoor.fr/Emploi/espagne-data-emplois-SRCH_IL.0,6_IN86_KO7,11.htm",
-    "https://www.glassdoor.fr/Emploi/espage-developer-emplois-SRCH_IL.0,6_IN86_KO7,13.htm",
-    "https://www.glassdoor.fr/Emploi/espagne-tech-emplois-SRCH_IL.0,6_IN86_KO7,24.htm",
-    "https://www.glassdoor.fr/Emploi/belgique-data-emplois-SRCH_IL.0,6_IN86_KO7,11.htm",
-    "https://www.glassdoor.fr/Emploi/belgique-developer-emplois-SRCH_IL.0,6_IN86_KO7,13.htm",
-    "https://www.glassdoor.fr/Emploi/belgique-tech-emplois-SRCH_IL.0,6_IN86_KO7,24.htm",
+    "https://www.glassdoor.fr/Emploi/espagne-data-emplois-SRCH_IL.0,7_IN219_KO8,12.htm",
+    "https://www.glassdoor.fr/Emploi/espagne-developer-emplois-SRCH_IL.0,7_IN219_KO8,17.htm",
+    "https://www.glassdoor.fr/Emploi/espagne-tech-emplois-SRCH_IL.0,7_IN219_KO8,12.htm",
+    "https://www.glassdoor.fr/Emploi/belgique-data-emplois-SRCH_IL.0,8_IN25_KO9,13.htm",
+    "https://www.glassdoor.fr/Emploi/belgique-dev-emplois-SRCH_IL.0,8_IN25_KO9,12.htm",
+    "https://www.glassdoor.fr/Emploi/belgique-tech-emplois-SRCH_IL.0,8_IN25_KO9,13.htm",
     
 ]
 
