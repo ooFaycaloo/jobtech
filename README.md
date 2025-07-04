@@ -193,6 +193,23 @@ The API uses JWT Bearer Token authentication.
    airflow scheduler
    ```
 
+
+## PostgreSQL Integration with Airflow
+
+To facilitate the transformation and loading of data into PostgreSQL, the project uses the `PostgresHook` provided by Apache Airflow. This hook allows seamless interaction with the PostgreSQL database, enabling the execution of SQL queries directly from Airflow tasks.
+
+### Configuration
+The connection to PostgreSQL is established via the Airflow interface:
+1. Navigate to "Admin > Connections" in the Airflow web interface.
+2. Create a new connection with the following details:
+   - **Conn Id**: A unique identifier for the connection (e.g., `postgres_default`).
+   - **Conn Type**: PostgreSQL.
+   - **Host**: The hostname of the PostgreSQL server.
+   - **Schema**: The database name.
+   - **Login**: The username for the database.
+   - **Password**: The password for the database.
+   - **Port**: The port number (default is 5432).
+
 ### Running the DAG
 1. Access the Airflow web interface at `http://localhost:8080`.
 2. Trigger the `talent_insights` DAG to start scraping and processing data.
