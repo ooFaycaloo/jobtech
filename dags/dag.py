@@ -36,8 +36,8 @@ urls = [
 ]
 
 # Dossier temporaire pour stocker les fichiers CSV intermédiaires
-OUTPUT_DIR = "/talent_insight/output"
-FINAL_OUTPUT = "/talent_insight/output/all_jobs.csv"
+OUTPUT_DIR = "/jobtech/output"
+FINAL_OUTPUT = "/jobtech/output/all_jobs.csv"
 os.makedirs(OUTPUT_DIR, exist_ok=True)
 
 # Configuration DAG
@@ -51,7 +51,7 @@ default_args = {
 
 def run_adzuna_scraping():
     offers = fetch_adzuna_offers()
-    save_offers_to_csv(offers, "/talent_insight/output/adzuna_multi_country.csv")
+    save_offers_to_csv(offers, "/jobtech/output/adzuna_multi_country.csv")
 
 with DAG(
     dag_id='talent_insights',
@@ -100,7 +100,7 @@ with DAG(
     task_insert_adzuna_to_mongo = PythonOperator(
     task_id='insert_adzuna_to_mongodb',
         python_callable=lambda: insert_csv_to_mongodb(
-            "/talent_insight/output/adzuna_multi_country.csv", 
+            "/jobtech/output/adzuna_multi_country.csv", 
             "adzuna_jobs"
         ),
 )
@@ -108,7 +108,7 @@ with DAG(
     task_insert_github_to_mongo = PythonOperator(
         task_id='insert_github_to_mongodb',
         python_callable=lambda: insert_csv_to_mongodb(
-            "/talent_insight/output/github_trending.csv", 
+            "/jobtech/output/github_trending.csv", 
             "github_trending"
         ),
 )
@@ -120,7 +120,7 @@ with DAG(
     task_insert_meteojob_to_mongo = PythonOperator(
         task_id='insert_meteojob_to_mongodb',
         python_callable=lambda: insert_csv_to_mongodb(
-            "/talent_insight/output/meteojob.csv", 
+            "/jobtech/output/meteojob.csv", 
             "meteojob"
         ),
 )
@@ -139,7 +139,7 @@ with DAG(
     task_insert_google_trend_to_mongo = PythonOperator(
         task_id='insert_google_trend_to_mongodb',
         python_callable=lambda: insert_csv_to_mongodb(
-            "/talent_insight/output/google_trend.csv", 
+            "/jobtech/output/google_trend.csv", 
             "google_trend"
         ),
     )
@@ -147,7 +147,7 @@ with DAG(
     task_insert_stepstone_jobs_to_mongo = PythonOperator(
         task_id='insert_stepsstone_jobs_to_mongodb',
         python_callable=lambda: insert_csv_to_mongodb(
-            "/talent_insight/output/stepstone_jobs.csv", 
+            "/jobtech/output/stepstone_jobs.csv", 
             "stepstone_jobs"
         ),
     )
