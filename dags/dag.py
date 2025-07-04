@@ -54,7 +54,7 @@ def run_adzuna_scraping():
     save_offers_to_csv(offers, "/talent_insight/output/adzuna_multi_country.csv")
 
 with DAG(
-    dag_id='multi_url_scraping_glassdoor',
+    dag_id='talent_insights',
     default_args=default_args,
     schedule_interval='@daily',  # ✅ Exécution quotidienne
     catchup=False,
