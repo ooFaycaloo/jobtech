@@ -1,0 +1,985 @@
+{
+	"info": {
+		"_postman_id": "924446c9-694b-4b5c-9e92-112de6d302da",
+		"name": "datalake",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json",
+		"_exporter_id": "41750725"
+	},
+	"item": [
+		{
+			"name": "http://127.0.0.1:8000/api/token/",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "username",
+							"value": "amayas",
+							"type": "text"
+						},
+						{
+							"key": "password",
+							"value": "amayas",
+							"type": "text"
+						}
+					]
+				},
+				"url": "http://127.0.0.1:8000/api/token/"
+			},
+			"response": []
+		},
+		{
+			"name": "adduser",
+			"request": {
+				"method": "GET",
+				"header": []
+			},
+			"response": [
+				{
+					"name": "New Request",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"username\": \"amayas123\",\n  \"password\": \"test1234\"\n}\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://127.0.0.1:8000/api/v1/register/"
+					},
+					"status": "Created",
+					"code": 201,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Date",
+							"value": "Fri, 04 Jul 2025 12:15:58 GMT"
+						},
+						{
+							"key": "Server",
+							"value": "WSGIServer/0.2 CPython/3.12.6"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Vary",
+							"value": "Accept"
+						},
+						{
+							"key": "Allow",
+							"value": "POST, OPTIONS"
+						},
+						{
+							"key": "X-Frame-Options",
+							"value": "DENY"
+						},
+						{
+							"key": "Content-Length",
+							"value": "508"
+						},
+						{
+							"key": "X-Content-Type-Options",
+							"value": "nosniff"
+						},
+						{
+							"key": "Referrer-Policy",
+							"value": "same-origin"
+						},
+						{
+							"key": "Cross-Origin-Opener-Policy",
+							"value": "same-origin"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"message\": \"User created\",\n    \"access\": \"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzUxNjMxNjU4LCJpYXQiOjE3NTE2MzEzNTgsImp0aSI6IjY2ZTdjODAyMmExNDQyOGViMDRjZDVkMGY1ZmE4NmM5IiwidXNlcl9pZCI6NH0.bGQuSvU1cGa0OsnF1jfx3IsmLKagrThGulNTCYWbRu4\",\n    \"refresh\": \"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoicmVmcmVzaCIsImV4cCI6MTc1MTcxNzc1OCwiaWF0IjoxNzUxNjMxMzU4LCJqdGkiOiI0MDI4OWM3ODdmNDI0YzI3OWE1NDZjYTdlYjBlZTdlMyIsInVzZXJfaWQiOjR9.HzoLAk2dGluGPLy-ohohIMYRLe6dzMnXeEzMUKBkGwo\"\n}"
+				}
+			]
+		},
+		{
+			"name": "top_job_remuneration",
+			"request": {
+				"method": "GET",
+				"header": []
+			},
+			"response": [
+				{
+					"name": "New Request",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8000/api/v1/salary/top_jobs/?country=fr",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"v1",
+								"salary",
+								"top_jobs",
+								""
+							],
+							"query": [
+								{
+									"key": "country",
+									"value": "fr"
+								}
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Date",
+							"value": "Fri, 04 Jul 2025 12:16:10 GMT"
+						},
+						{
+							"key": "Server",
+							"value": "WSGIServer/0.2 CPython/3.12.6"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Vary",
+							"value": "Accept"
+						},
+						{
+							"key": "Allow",
+							"value": "OPTIONS, GET"
+						},
+						{
+							"key": "X-Frame-Options",
+							"value": "DENY"
+						},
+						{
+							"key": "Content-Length",
+							"value": "422"
+						},
+						{
+							"key": "X-Content-Type-Options",
+							"value": "nosniff"
+						},
+						{
+							"key": "Referrer-Policy",
+							"value": "same-origin"
+						},
+						{
+							"key": "Cross-Origin-Opener-Policy",
+							"value": "same-origin"
+						}
+					],
+					"cookie": [],
+					"body": "[\n    {\n        \"normalized_title\": \"AI Engineer - - En\",\n        \"avg_salary\": 150000\n    },\n    {\n        \"normalized_title\": \"Data Scientist Machine Learning - - En\",\n        \"avg_salary\": 150000\n    },\n    {\n        \"normalized_title\": \"Software Engineer, Frontend\",\n        \"avg_salary\": 105000\n    },\n    {\n        \"normalized_title\": \"Senior Frontend Software Engineer\",\n        \"avg_salary\": 100000\n    },\n    {\n        \"normalized_title\": \"Head Of Engineering IA et Machine Learning dans le Legaltech Remote Possible\",\n        \"avg_salary\": 90000\n    }\n]"
+				}
+			]
+		},
+		{
+			"name": "top_country_remuneration",
+			"request": {
+				"method": "GET",
+				"header": []
+			},
+			"response": [
+				{
+					"name": "New Request",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": "http://localhost:8000/api/v1/salary/top_countries"
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Date",
+							"value": "Fri, 04 Jul 2025 12:16:18 GMT"
+						},
+						{
+							"key": "Server",
+							"value": "WSGIServer/0.2 CPython/3.12.6"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Vary",
+							"value": "Accept"
+						},
+						{
+							"key": "Allow",
+							"value": "OPTIONS, GET"
+						},
+						{
+							"key": "X-Frame-Options",
+							"value": "DENY"
+						},
+						{
+							"key": "Content-Length",
+							"value": "479"
+						},
+						{
+							"key": "X-Content-Type-Options",
+							"value": "nosniff"
+						},
+						{
+							"key": "Referrer-Policy",
+							"value": "same-origin"
+						},
+						{
+							"key": "Cross-Origin-Opener-Policy",
+							"value": "same-origin"
+						}
+					],
+					"cookie": [],
+					"body": "[\n    {\n        \"country_name\": \"PL\",\n        \"avg_salary\": 176571.223880597\n    },\n    {\n        \"country_name\": \"CH\",\n        \"avg_salary\": 150279.2619047619\n    },\n    {\n        \"country_name\": \"ES\",\n        \"avg_salary\": 76127.56410256411\n    },\n    {\n        \"country_name\": \"DE\",\n        \"avg_salary\": 70568.37837837837\n    },\n    {\n        \"country_name\": \"IT\",\n        \"avg_salary\": 60387.06498194946\n    },\n    {\n        \"country_name\": \"NL\",\n        \"avg_salary\": 58262.49616858237\n    },\n    {\n        \"country_name\": \"BE\",\n        \"avg_salary\": 42079.37096774193\n    },\n    {\n        \"country_name\": \"AT\",\n        \"avg_salary\": 40821.482089552235\n    },\n    {\n        \"country_name\": \"FR\",\n        \"avg_salary\": 28802.850485436895\n    }\n]"
+				}
+			]
+		},
+		{
+			"name": "trend_salary_par_date",
+			"request": {
+				"method": "GET",
+				"header": []
+			},
+			"response": [
+				{
+					"name": "New Request",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8000/api/v1/salary/trends/?title=data%20scientist",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"v1",
+								"salary",
+								"trends",
+								""
+							],
+							"query": [
+								{
+									"key": "title",
+									"value": "data%20scientist"
+								}
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Date",
+							"value": "Fri, 04 Jul 2025 12:16:25 GMT"
+						},
+						{
+							"key": "Server",
+							"value": "WSGIServer/0.2 CPython/3.12.6"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Vary",
+							"value": "Accept"
+						},
+						{
+							"key": "Allow",
+							"value": "OPTIONS, GET"
+						},
+						{
+							"key": "X-Frame-Options",
+							"value": "DENY"
+						},
+						{
+							"key": "Content-Length",
+							"value": "55"
+						},
+						{
+							"key": "X-Content-Type-Options",
+							"value": "nosniff"
+						},
+						{
+							"key": "Referrer-Policy",
+							"value": "same-origin"
+						},
+						{
+							"key": "Cross-Origin-Opener-Policy",
+							"value": "same-origin"
+						}
+					],
+					"cookie": [],
+					"body": "[\n    {\n        \"date\": \"2025-07-04\",\n        \"avg_salary\": 111429.33823529411\n    }\n]"
+				}
+			]
+		},
+		{
+			"name": "salary_job",
+			"request": {
+				"method": "GET",
+				"header": []
+			},
+			"response": [
+				{
+					"name": "trend_salary_par_date Copy",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/v1/salary/stats/?title=data%20engineer&country=fr",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"v1",
+								"salary",
+								"stats",
+								""
+							],
+							"query": [
+								{
+									"key": "title",
+									"value": "data%20engineer"
+								},
+								{
+									"key": "country",
+									"value": "fr"
+								}
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Date",
+							"value": "Fri, 04 Jul 2025 12:16:31 GMT"
+						},
+						{
+							"key": "Server",
+							"value": "WSGIServer/0.2 CPython/3.12.6"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Vary",
+							"value": "Accept"
+						},
+						{
+							"key": "Allow",
+							"value": "OPTIONS, GET"
+						},
+						{
+							"key": "X-Frame-Options",
+							"value": "DENY"
+						},
+						{
+							"key": "Content-Length",
+							"value": "65"
+						},
+						{
+							"key": "X-Content-Type-Options",
+							"value": "nosniff"
+						},
+						{
+							"key": "Referrer-Policy",
+							"value": "same-origin"
+						},
+						{
+							"key": "Cross-Origin-Opener-Policy",
+							"value": "same-origin"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"salary_min\": 350,\n    \"salary_max\": 80000,\n    \"salary_median\": 37125\n}"
+				}
+			]
+		},
+		{
+			"name": "top language git",
+			"request": {
+				"method": "GET",
+				"header": []
+			},
+			"response": [
+				{
+					"name": "salary_job Copy",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": "http://localhost:8000/api/v1/github/languages/"
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Date",
+							"value": "Fri, 04 Jul 2025 12:16:41 GMT"
+						},
+						{
+							"key": "Server",
+							"value": "WSGIServer/0.2 CPython/3.12.6"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Vary",
+							"value": "Accept"
+						},
+						{
+							"key": "Allow",
+							"value": "OPTIONS, GET"
+						},
+						{
+							"key": "X-Frame-Options",
+							"value": "DENY"
+						},
+						{
+							"key": "Content-Length",
+							"value": "259"
+						},
+						{
+							"key": "X-Content-Type-Options",
+							"value": "nosniff"
+						},
+						{
+							"key": "Referrer-Policy",
+							"value": "same-origin"
+						},
+						{
+							"key": "Cross-Origin-Opener-Policy",
+							"value": "same-origin"
+						}
+					],
+					"cookie": [],
+					"body": "[\n    {\n        \"language\": \"Python\",\n        \"total\": 5\n    },\n    {\n        \"language\": \"TypeScript\",\n        \"total\": 5\n    },\n    {\n        \"language\": \"Jupyter Notebook\",\n        \"total\": 1\n    },\n    {\n        \"language\": \"Go\",\n        \"total\": 1\n    },\n    {\n        \"language\": \"Shell\",\n        \"total\": 1\n    },\n    {\n        \"language\": \"HTML\",\n        \"total\": 1\n    },\n    {\n        \"language\": \"PHP\",\n        \"total\": 1\n    },\n    {\n        \"language\": \"Rust\",\n        \"total\": 1\n    }\n]"
+				}
+			]
+		},
+		{
+			"name": "top rating entreprise",
+			"request": {
+				"method": "GET",
+				"header": []
+			},
+			"response": [
+				{
+					"name": "top language git Copy",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": "http://localhost:8000/api/v1/ratings/top/"
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Date",
+							"value": "Fri, 04 Jul 2025 12:16:47 GMT"
+						},
+						{
+							"key": "Server",
+							"value": "WSGIServer/0.2 CPython/3.12.6"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Vary",
+							"value": "Accept"
+						},
+						{
+							"key": "Allow",
+							"value": "OPTIONS, GET"
+						},
+						{
+							"key": "X-Frame-Options",
+							"value": "DENY"
+						},
+						{
+							"key": "Content-Length",
+							"value": "8329"
+						},
+						{
+							"key": "X-Content-Type-Options",
+							"value": "nosniff"
+						},
+						{
+							"key": "Referrer-Policy",
+							"value": "same-origin"
+						},
+						{
+							"key": "Cross-Origin-Opener-Policy",
+							"value": "same-origin"
+						}
+					],
+					"cookie": [],
+					"body": "[\n    {\n        \"company\": \"Climb\",\n        \"rating\": 5\n    },\n    {\n        \"company\": \"Poly Event\",\n        \"rating\": 5\n    },\n    {\n        \"company\": \"løvell\",\n        \"rating\": 5\n    },\n    {\n        \"company\": \"Coopteo Innovation\",\n        \"rating\": 5\n    },\n    {\n        \"company\": \"GROUPE GD COM\",\n        \"rating\": 5\n    },\n    {\n        \"company\": \"VAUBAN SYSTEMS\",\n        \"rating\": 5\n    },\n    {\n        \"company\": \"Faber Group BV\",\n        \"rating\": 5\n    },\n    {\n        \"company\": \"App'Ines\",\n        \"rating\": 5\n    },\n    {\n        \"company\": \"ARSENALIA GmbH\",\n        \"rating\": 5\n    },\n    {\n        \"company\": \"MULTI Ventures\",\n        \"rating\": 5\n    },\n    {\n        \"company\": \"Rtone\",\n        \"rating\": 5\n    },\n    {\n        \"company\": \"VEGEA\",\n        \"rating\": 5\n    },\n    {\n        \"company\": \"olome\",\n        \"rating\": 5\n    },\n    {\n        \"company\": \"LINX CONSULTING\",\n        \"rating\": 5\n    },\n    {\n        \"company\": \"Ardans\",\n        \"rating\": 5\n    },\n    {\n        \"company\": \"ADS GROUP\",\n        \"rating\": 5\n    },\n    {\n        \"company\": \"Watura\",\n        \"rating\": 5\n    },\n    {\n        \"company\": \"Make me win\",\n        \"rating\": 5\n    },\n    {\n        \"company\": \"Kalitics\",\n        \"rating\": 5\n    },\n    {\n        \"company\": \"IWASE COSFA EUROPE\",\n        \"rating\": 5\n    },\n    {\n        \"company\": \"Riskdata\",\n        \"rating\": 5\n    },\n    {\n        \"company\": \"HYLEANCE\",\n        \"rating\": 5\n    },\n    {\n        \"company\": \"MULTI Ventures\",\n        \"rating\": 5\n    },\n    {\n        \"company\": \"Chanel\",\n        \"rating\": 5\n    },\n    {\n        \"company\": \"Mariloo\",\n        \"rating\": 5\n    },\n    {\n        \"company\": \"MDA Performance & Consulting\",\n        \"rating\": 5\n    },\n    {\n        \"company\": \"aedifion\",\n        \"rating\": 5\n    },\n    {\n        \"company\": \"DEMS\",\n        \"rating\": 5\n    },\n    {\n        \"company\": \"ZeTrace\",\n        \"rating\": 5\n    },\n    {\n        \"company\": \"Chanel\",\n        \"rating\": 5\n    },\n    {\n        \"company\": \"LINKAI\",\n        \"rating\": 5\n    },\n    {\n        \"company\": \"Riskdata\",\n        \"rating\": 5\n    },\n    {\n        \"company\": \"Alteia\",\n        \"rating\": 5\n    },\n    {\n        \"company\": \"N2JSOFT\",\n        \"rating\": 4.9\n    },\n    {\n        \"company\": \"Hello Pomelo\",\n        \"rating\": 4.9\n    },\n    {\n        \"company\": \"N2JSoft\",\n        \"rating\": 4.9\n    },\n    {\n        \"company\": \"Implicity\",\n        \"rating\": 4.9\n    },\n    {\n        \"company\": \"Pictarine\",\n        \"rating\": 4.8\n    },\n    {\n        \"company\": \"Yateo\",\n        \"rating\": 4.8\n    },\n    {\n        \"company\": \"Nomad Education\",\n        \"rating\": 4.8\n    },\n    {\n        \"company\": \"Forcyd\",\n        \"rating\": 4.7\n    },\n    {\n        \"company\": \"Kraken\",\n        \"rating\": 4.7\n    },\n    {\n        \"company\": \"Bitfinex\",\n        \"rating\": 4.7\n    },\n    {\n        \"company\": \"Club Employés\",\n        \"rating\": 4.7\n    },\n    {\n        \"company\": \"DAMAE Medical\",\n        \"rating\": 4.7\n    },\n    {\n        \"company\": \"Hatmada-Group\",\n        \"rating\": 4.7\n    },\n    {\n        \"company\": \"BCF Life Sciences\",\n        \"rating\": 4.7\n    },\n    {\n        \"company\": \"Uptoo\",\n        \"rating\": 4.6\n    },\n    {\n        \"company\": \"Media-Start\",\n        \"rating\": 4.6\n    },\n    {\n        \"company\": \"MGT Conseil\",\n        \"rating\": 4.6\n    },\n    {\n        \"company\": \"Iguane Solutions\",\n        \"rating\": 4.6\n    },\n    {\n        \"company\": \"Uptoo\",\n        \"rating\": 4.6\n    },\n    {\n        \"company\": \"ElevenLabs\",\n        \"rating\": 4.6\n    },\n    {\n        \"company\": \"SupportYourApp\",\n        \"rating\": 4.6\n    },\n    {\n        \"company\": \"WEBB Traders BV\",\n        \"rating\": 4.6\n    },\n    {\n        \"company\": \"RTE International\",\n        \"rating\": 4.6\n    },\n    {\n        \"company\": \"Equativ\",\n        \"rating\": 4.6\n    },\n    {\n        \"company\": \"Media-Start\",\n        \"rating\": 4.6\n    },\n    {\n        \"company\": \"ElevenLabs\",\n        \"rating\": 4.6\n    },\n    {\n        \"company\": \"RTE International\",\n        \"rating\": 4.6\n    },\n    {\n        \"company\": \"ElevenLabs\",\n        \"rating\": 4.6\n    },\n    {\n        \"company\": \"Cheerz\",\n        \"rating\": 4.6\n    },\n    {\n        \"company\": \"Agryco (ex Agriconomie)\",\n        \"rating\": 4.6\n    },\n    {\n        \"company\": \"Uno Agency\",\n        \"rating\": 4.6\n    },\n    {\n        \"company\": \"2emotion\",\n        \"rating\": 4.6\n    },\n    {\n        \"company\": \"LINEUP7\",\n        \"rating\": 4.5\n    },\n    {\n        \"company\": \"Orosound\",\n        \"rating\": 4.5\n    },\n    {\n        \"company\": \"Electra\",\n        \"rating\": 4.5\n    },\n    {\n        \"company\": \"Store & Supply\",\n        \"rating\": 4.5\n    },\n    {\n        \"company\": \"Camptocamp\",\n        \"rating\": 4.5\n    },\n    {\n        \"company\": \"Technique Solaire\",\n        \"rating\": 4.5\n    },\n    {\n        \"company\": \"Qonto\",\n        \"rating\": 4.5\n    },\n    {\n        \"company\": \"Meet My Mama\",\n        \"rating\": 4.5\n    },\n    {\n        \"company\": \"Camptocamp\",\n        \"rating\": 4.5\n    },\n    {\n        \"company\": \"Streem Energy\",\n        \"rating\": 4.5\n    },\n    {\n        \"company\": \"Wonda VR\",\n        \"rating\": 4.5\n    },\n    {\n        \"company\": \"STACI\",\n        \"rating\": 4.5\n    },\n    {\n        \"company\": \"DQE Software\",\n        \"rating\": 4.5\n    },\n    {\n        \"company\": \"BLOOMAYS\",\n        \"rating\": 4.4\n    },\n    {\n        \"company\": \"Wecasa\",\n        \"rating\": 4.4\n    },\n    {\n        \"company\": \"Wecasa\",\n        \"rating\": 4.4\n    },\n    {\n        \"company\": \"Greener\",\n        \"rating\": 4.4\n    },\n    {\n        \"company\": \"Belacom\",\n        \"rating\": 4.4\n    },\n    {\n        \"company\": \"BLOOMAYS\",\n        \"rating\": 4.4\n    },\n    {\n        \"company\": \"Kazaar\",\n        \"rating\": 4.4\n    },\n    {\n        \"company\": \"Algolia\",\n        \"rating\": 4.4\n    },\n    {\n        \"company\": \"WiSEED\",\n        \"rating\": 4.4\n    },\n    {\n        \"company\": \"TechBiz Global GmbH\",\n        \"rating\": 4.4\n    },\n    {\n        \"company\": \"Groupe Editor\",\n        \"rating\": 4.4\n    },\n    {\n        \"company\": \"BLOOMAYS\",\n        \"rating\": 4.4\n    },\n    {\n        \"company\": \"Octopus Energy Group\",\n        \"rating\": 4.4\n    },\n    {\n        \"company\": \"Exotec\",\n        \"rating\": 4.4\n    },\n    {\n        \"company\": \"Natixis\",\n        \"rating\": 4.3\n    },\n    {\n        \"company\": \"Parcome\",\n        \"rating\": 4.3\n    },\n    {\n        \"company\": \"Natixis\",\n        \"rating\": 4.3\n    },\n    {\n        \"company\": \"Natixis SA\",\n        \"rating\": 4.3\n    },\n    {\n        \"company\": \"Natixis\",\n        \"rating\": 4.3\n    },\n    {\n        \"company\": \"Saphelec\",\n        \"rating\": 4.3\n    },\n    {\n        \"company\": \"Les Petites Canailles\",\n        \"rating\": 4.3\n    },\n    {\n        \"company\": \"TapNation\",\n        \"rating\": 4.3\n    },\n    {\n        \"company\": \"Pharmaplan SAS\",\n        \"rating\": 4.3\n    },\n    {\n        \"company\": \"Amarris France\",\n        \"rating\": 4.3\n    },\n    {\n        \"company\": \"Inria\",\n        \"rating\": 4.3\n    },\n    {\n        \"company\": \"Ukio\",\n        \"rating\": 4.3\n    },\n    {\n        \"company\": \"ActiveViam\",\n        \"rating\": 4.3\n    },\n    {\n        \"company\": \"Capital Fund Management\",\n        \"rating\": 4.3\n    },\n    {\n        \"company\": \"Capital Fund Management\",\n        \"rating\": 4.3\n    },\n    {\n        \"company\": \"Artelys\",\n        \"rating\": 4.3\n    },\n    {\n        \"company\": \"Voodoo\",\n        \"rating\": 4.3\n    },\n    {\n        \"company\": \"Natixis\",\n        \"rating\": 4.3\n    },\n    {\n        \"company\": \"Natixis\",\n        \"rating\": 4.3\n    },\n    {\n        \"company\": \"Indy\",\n        \"rating\": 4.3\n    },\n    {\n        \"company\": \"Voodoo\",\n        \"rating\": 4.3\n    },\n    {\n        \"company\": \"Wireless Logic\",\n        \"rating\": 4.3\n    },\n    {\n        \"company\": \"LUCERNYS\",\n        \"rating\": 4.3\n    },\n    {\n        \"company\": \"JALIOS\",\n        \"rating\": 4.3\n    },\n    {\n        \"company\": \"Natixis\",\n        \"rating\": 4.3\n    },\n    {\n        \"company\": \"LUCERNYS\",\n        \"rating\": 4.3\n    },\n    {\n        \"company\": \"Bizon (Publicis Groupe)\",\n        \"rating\": 4.3\n    },\n    {\n        \"company\": \"Bizon (Publicis Groupe)\",\n        \"rating\": 4.3\n    },\n    {\n        \"company\": \"ENR'J\",\n        \"rating\": 4.2\n    },\n    {\n        \"company\": \"Les Bons Artisans\",\n        \"rating\": 4.2\n    },\n    {\n        \"company\": \"Swile\",\n        \"rating\": 4.2\n    },\n    {\n        \"company\": \"Partoo\",\n        \"rating\": 4.2\n    },\n    {\n        \"company\": \"ILF Beratende Ingnieure\",\n        \"rating\": 4.2\n    },\n    {\n        \"company\": \"SAP\",\n        \"rating\": 4.2\n    },\n    {\n        \"company\": \"Cargobase\",\n        \"rating\": 4.2\n    },\n    {\n        \"company\": \"LACO\",\n        \"rating\": 4.2\n    },\n    {\n        \"company\": \"Open-Xchange GmbH\",\n        \"rating\": 4.2\n    },\n    {\n        \"company\": \"Tiime\",\n        \"rating\": 4.2\n    },\n    {\n        \"company\": \"Reqiva ltd\",\n        \"rating\": 4.2\n    },\n    {\n        \"company\": \"CLOSTERA\",\n        \"rating\": 4.2\n    },\n    {\n        \"company\": \"Endress+Hauser S.A.S.U.\",\n        \"rating\": 4.2\n    },\n    {\n        \"company\": \"Axone Data\",\n        \"rating\": 4.2\n    },\n    {\n        \"company\": \"Roquette\",\n        \"rating\": 4.2\n    },\n    {\n        \"company\": \"Yousign\",\n        \"rating\": 4.2\n    },\n    {\n        \"company\": \"Planity\",\n        \"rating\": 4.1\n    },\n    {\n        \"company\": \"Keyrus Life Science\",\n        \"rating\": 4.1\n    },\n    {\n        \"company\": \"OVRSEA\",\n        \"rating\": 4.1\n    },\n    {\n        \"company\": \"OXYGRAVURE\",\n        \"rating\": 4.1\n    },\n    {\n        \"company\": \"Acseo\",\n        \"rating\": 4.1\n    },\n    {\n        \"company\": \"APOLLO - CODING LIFE\",\n        \"rating\": 4.1\n    },\n    {\n        \"company\": \"American Express Global Business Travel\",\n        \"rating\": 4.1\n    },\n    {\n        \"company\": \"Edenred\",\n        \"rating\": 4.1\n    },\n    {\n        \"company\": \"Apple\",\n        \"rating\": 4.1\n    },\n    {\n        \"company\": \"American Express Global Business Travel\",\n        \"rating\": 4.1\n    },\n    {\n        \"company\": \"Crédit Agricole Personal Finance & Mobility\",\n        \"rating\": 4.1\n    },\n    {\n        \"company\": \"Ayming\",\n        \"rating\": 4.1\n    },\n    {\n        \"company\": \"Mistertemp' group\",\n        \"rating\": 4.1\n    },\n    {\n        \"company\": \"EDF Renouvelables\",\n        \"rating\": 4.1\n    },\n    {\n        \"company\": \"L'atelier des Chefs\",\n        \"rating\": 4.1\n    },\n    {\n        \"company\": \"AXA\",\n        \"rating\": 4.1\n    },\n    {\n        \"company\": \"Ayming\",\n        \"rating\": 4.1\n    },\n    {\n        \"company\": \"AVL LMM S.A.S.\",\n        \"rating\": 4.1\n    },\n    {\n        \"company\": \"Médias France\",\n        \"rating\": 4.1\n    },\n    {\n        \"company\": \"Edenred\",\n        \"rating\": 4.1\n    },\n    {\n        \"company\": \"PMU\",\n        \"rating\": 4.1\n    },\n    {\n        \"company\": \"Sarbacane Software\",\n        \"rating\": 4.1\n    },\n    {\n        \"company\": \"EUROCONTROL - Supporting European Aviation\",\n        \"rating\": 4.1\n    },\n    {\n        \"company\": \"Ad4Screen\",\n        \"rating\": 4.1\n    },\n    {\n        \"company\": \"Noveo\",\n        \"rating\": 4.1\n    },\n    {\n        \"company\": \"Greenbull Nutrition\",\n        \"rating\": 4.1\n    },\n    {\n        \"company\": \"Agregio Solutions\",\n        \"rating\": 4.1\n    },\n    {\n        \"company\": \"Atelier Brâam\",\n        \"rating\": 4.1\n    },\n    {\n        \"company\": \"l'Oréal\",\n        \"rating\": 4.1\n    },\n    {\n        \"company\": \"Apple\",\n        \"rating\": 4.1\n    },\n    {\n        \"company\": \"Siemens\",\n        \"rating\": 4.1\n    },\n    {\n        \"company\": \"LE GOURMET DE PARIS\",\n        \"rating\": 4\n    },\n    {\n        \"company\": \"Séché Environnement\",\n        \"rating\": 4\n    },\n    {\n        \"company\": \"CAILabs\",\n        \"rating\": 4\n    },\n    {\n        \"company\": \"Nutri&Co\",\n        \"rating\": 4\n    },\n    {\n        \"company\": \"Libon\",\n        \"rating\": 4\n    },\n    {\n        \"company\": \"NOVAL\",\n        \"rating\": 4\n    },\n    {\n        \"company\": \"McKinsey & Company\",\n        \"rating\": 4\n    },\n    {\n        \"company\": \"Naval Group\",\n        \"rating\": 4\n    },\n    {\n        \"company\": \"POK\",\n        \"rating\": 4\n    },\n    {\n        \"company\": \"Prismic\",\n        \"rating\": 4\n    },\n    {\n        \"company\": \"PI ELECTRONIQUE\",\n        \"rating\": 4\n    },\n    {\n        \"company\": \"Lesaffre\",\n        \"rating\": 4\n    },\n    {\n        \"company\": \"CAPSA CONTAINER\",\n        \"rating\": 4\n    },\n    {\n        \"company\": \"Homa\",\n        \"rating\": 4\n    },\n    {\n        \"company\": \"DISCURV\",\n        \"rating\": 4\n    },\n    {\n        \"company\": \"Gartner\",\n        \"rating\": 4\n    },\n    {\n        \"company\": \"Ecole Gustave\",\n        \"rating\": 4\n    },\n    {\n        \"company\": \"Bel Group\",\n        \"rating\": 4\n    },\n    {\n        \"company\": \"Cintoo SAS\",\n        \"rating\": 4\n    },\n    {\n        \"company\": \"Groupe Les Echos Le Parisien\",\n        \"rating\": 4\n    },\n    {\n        \"company\": \"DoubleVerify\",\n        \"rating\": 4\n    },\n    {\n        \"company\": \"MEDIAPOSTE\",\n        \"rating\": 4\n    },\n    {\n        \"company\": \"Bouygues Telecom\",\n        \"rating\": 4\n    },\n    {\n        \"company\": \"Corsearch\",\n        \"rating\": 4\n    },\n    {\n        \"company\": \"Web et Vous\",\n        \"rating\": 4\n    },\n    {\n        \"company\": \"The Exploration Company\",\n        \"rating\": 4\n    },\n    {\n        \"company\": \"Libon\",\n        \"rating\": 4\n    },\n    {\n        \"company\": \"Live Nation\",\n        \"rating\": 4\n    },\n    {\n        \"company\": \"Bel Group\",\n        \"rating\": 4\n    },\n    {\n        \"company\": \"Nutri&Co\",\n        \"rating\": 4\n    },\n    {\n        \"company\": \"Kaplan Languages Group\",\n        \"rating\": 4\n    },\n    {\n        \"company\": \"Sollers Consulting\",\n        \"rating\": 4\n    },\n    {\n        \"company\": \"DoubleVerify\",\n        \"rating\": 4\n    },\n    {\n        \"company\": \"Ecole Gustave\",\n        \"rating\": 4\n    },\n    {\n        \"company\": \"BOLD Digital\",\n        \"rating\": 4\n    },\n    {\n        \"company\": \"Pretto\",\n        \"rating\": 4\n    },\n    {\n        \"company\": \"Brevo\",\n        \"rating\": 4\n    },\n    {\n        \"company\": \"United Nations\",\n        \"rating\": 4\n    },\n    {\n        \"company\": \"DISCURV\",\n        \"rating\": 4\n    },\n    {\n        \"company\": \"F. Initiatives\",\n        \"rating\": 4\n    },\n    {\n        \"company\": \"Converteo\",\n        \"rating\": 4\n    },\n    {\n        \"company\": \"Econsulting\",\n        \"rating\": 4\n    },\n    {\n        \"company\": \"Nature et découvertes\",\n        \"rating\": 4\n    },\n    {\n        \"company\": \"Assessfirst\",\n        \"rating\": 4\n    },\n    {\n        \"company\": \"McKinsey & Company\",\n        \"rating\": 4\n    },\n    {\n        \"company\": \"Datadog\",\n        \"rating\": 4\n    }\n]"
+				}
+			]
+		},
+		{
+			"name": "top rating entreprise average",
+			"request": {
+				"method": "GET",
+				"header": []
+			},
+			"response": [
+				{
+					"name": "top rating entreprise Copy",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": "http://localhost:8000/api/v1/ratings/average/"
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Date",
+							"value": "Fri, 04 Jul 2025 12:16:53 GMT"
+						},
+						{
+							"key": "Server",
+							"value": "WSGIServer/0.2 CPython/3.12.6"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Vary",
+							"value": "Accept"
+						},
+						{
+							"key": "Allow",
+							"value": "OPTIONS, GET"
+						},
+						{
+							"key": "X-Frame-Options",
+							"value": "DENY"
+						},
+						{
+							"key": "Content-Length",
+							"value": "18704"
+						},
+						{
+							"key": "X-Content-Type-Options",
+							"value": "nosniff"
+						},
+						{
+							"key": "Referrer-Policy",
+							"value": "same-origin"
+						},
+						{
+							"key": "Cross-Origin-Opener-Policy",
+							"value": "same-origin"
+						}
+					],
+					"cookie": [],
+					"body": "[\n    {\n        \"company\": \"aedifion\",\n        \"avg_rating\": 5\n    },\n    {\n        \"company\": \"HYLEANCE\",\n        \"avg_rating\": 5\n    },\n    {\n        \"company\": \"Kalitics\",\n        \"avg_rating\": 5\n    },\n    {\n        \"company\": \"Coopteo Innovation\",\n        \"avg_rating\": 5\n    },\n    {\n        \"company\": \"MULTI Ventures\",\n        \"avg_rating\": 5\n    },\n    {\n        \"company\": \"MDA Performance & Consulting\",\n        \"avg_rating\": 5\n    },\n    {\n        \"company\": \"Ardans\",\n        \"avg_rating\": 5\n    },\n    {\n        \"company\": \"Watura\",\n        \"avg_rating\": 5\n    },\n    {\n        \"company\": \"VAUBAN SYSTEMS\",\n        \"avg_rating\": 5\n    },\n    {\n        \"company\": \"Alteia\",\n        \"avg_rating\": 5\n    },\n    {\n        \"company\": \"GROUPE GD COM\",\n        \"avg_rating\": 5\n    },\n    {\n        \"company\": \"ARSENALIA GmbH\",\n        \"avg_rating\": 5\n    },\n    {\n        \"company\": \"IWASE COSFA EUROPE\",\n        \"avg_rating\": 5\n    },\n    {\n        \"company\": \"løvell\",\n        \"avg_rating\": 5\n    },\n    {\n        \"company\": \"Mariloo\",\n        \"avg_rating\": 5\n    },\n    {\n        \"company\": \"ADS GROUP\",\n        \"avg_rating\": 5\n    },\n    {\n        \"company\": \"olome\",\n        \"avg_rating\": 5\n    },\n    {\n        \"company\": \"DEMS\",\n        \"avg_rating\": 5\n    },\n    {\n        \"company\": \"Rtone\",\n        \"avg_rating\": 5\n    },\n    {\n        \"company\": \"Make me win\",\n        \"avg_rating\": 5\n    },\n    {\n        \"company\": \"LINX CONSULTING\",\n        \"avg_rating\": 5\n    },\n    {\n        \"company\": \"LINKAI\",\n        \"avg_rating\": 5\n    },\n    {\n        \"company\": \"VEGEA\",\n        \"avg_rating\": 5\n    },\n    {\n        \"company\": \"Riskdata\",\n        \"avg_rating\": 5\n    },\n    {\n        \"company\": \"Climb\",\n        \"avg_rating\": 5\n    },\n    {\n        \"company\": \"ZeTrace\",\n        \"avg_rating\": 5\n    },\n    {\n        \"company\": \"Poly Event\",\n        \"avg_rating\": 5\n    },\n    {\n        \"company\": \"Chanel\",\n        \"avg_rating\": 5\n    },\n    {\n        \"company\": \"Faber Group BV\",\n        \"avg_rating\": 5\n    },\n    {\n        \"company\": \"App'Ines\",\n        \"avg_rating\": 5\n    },\n    {\n        \"company\": \"N2JSOFT\",\n        \"avg_rating\": 4.9\n    },\n    {\n        \"company\": \"Hello Pomelo\",\n        \"avg_rating\": 4.9\n    },\n    {\n        \"company\": \"N2JSoft\",\n        \"avg_rating\": 4.9\n    },\n    {\n        \"company\": \"Implicity\",\n        \"avg_rating\": 4.9\n    },\n    {\n        \"company\": \"Pictarine\",\n        \"avg_rating\": 4.8\n    },\n    {\n        \"company\": \"Nomad Education\",\n        \"avg_rating\": 4.8\n    },\n    {\n        \"company\": \"Yateo\",\n        \"avg_rating\": 4.8\n    },\n    {\n        \"company\": \"DAMAE Medical\",\n        \"avg_rating\": 4.7\n    },\n    {\n        \"company\": \"BCF Life Sciences\",\n        \"avg_rating\": 4.7\n    },\n    {\n        \"company\": \"Forcyd\",\n        \"avg_rating\": 4.7\n    },\n    {\n        \"company\": \"Bitfinex\",\n        \"avg_rating\": 4.7\n    },\n    {\n        \"company\": \"Hatmada-Group\",\n        \"avg_rating\": 4.7\n    },\n    {\n        \"company\": \"Club Employés\",\n        \"avg_rating\": 4.7\n    },\n    {\n        \"company\": \"Kraken\",\n        \"avg_rating\": 4.7\n    },\n    {\n        \"company\": \"Uptoo\",\n        \"avg_rating\": 4.6\n    },\n    {\n        \"company\": \"2emotion\",\n        \"avg_rating\": 4.6\n    },\n    {\n        \"company\": \"Agryco (ex Agriconomie)\",\n        \"avg_rating\": 4.6\n    },\n    {\n        \"company\": \"Uno Agency\",\n        \"avg_rating\": 4.6\n    },\n    {\n        \"company\": \"Iguane Solutions\",\n        \"avg_rating\": 4.6\n    },\n    {\n        \"company\": \"MGT Conseil\",\n        \"avg_rating\": 4.6\n    },\n    {\n        \"company\": \"ElevenLabs\",\n        \"avg_rating\": 4.6\n    },\n    {\n        \"company\": \"SupportYourApp\",\n        \"avg_rating\": 4.6\n    },\n    {\n        \"company\": \"Media-Start\",\n        \"avg_rating\": 4.6\n    },\n    {\n        \"company\": \"WEBB Traders BV\",\n        \"avg_rating\": 4.6\n    },\n    {\n        \"company\": \"RTE International\",\n        \"avg_rating\": 4.6\n    },\n    {\n        \"company\": \"Cheerz\",\n        \"avg_rating\": 4.6\n    },\n    {\n        \"company\": \"Equativ\",\n        \"avg_rating\": 4.6\n    },\n    {\n        \"company\": \"Technique Solaire\",\n        \"avg_rating\": 4.5\n    },\n    {\n        \"company\": \"Streem Energy\",\n        \"avg_rating\": 4.5\n    },\n    {\n        \"company\": \"Camptocamp\",\n        \"avg_rating\": 4.5\n    },\n    {\n        \"company\": \"Wonda VR\",\n        \"avg_rating\": 4.5\n    },\n    {\n        \"company\": \"Electra\",\n        \"avg_rating\": 4.5\n    },\n    {\n        \"company\": \"Meet My Mama\",\n        \"avg_rating\": 4.5\n    },\n    {\n        \"company\": \"DQE Software\",\n        \"avg_rating\": 4.5\n    },\n    {\n        \"company\": \"LINEUP7\",\n        \"avg_rating\": 4.5\n    },\n    {\n        \"company\": \"Store & Supply\",\n        \"avg_rating\": 4.5\n    },\n    {\n        \"company\": \"Orosound\",\n        \"avg_rating\": 4.5\n    },\n    {\n        \"company\": \"Qonto\",\n        \"avg_rating\": 4.5\n    },\n    {\n        \"company\": \"STACI\",\n        \"avg_rating\": 4.5\n    },\n    {\n        \"company\": \"TechBiz Global GmbH\",\n        \"avg_rating\": 4.4\n    },\n    {\n        \"company\": \"Wecasa\",\n        \"avg_rating\": 4.4\n    },\n    {\n        \"company\": \"Greener\",\n        \"avg_rating\": 4.4\n    },\n    {\n        \"company\": \"Exotec\",\n        \"avg_rating\": 4.4\n    },\n    {\n        \"company\": \"Octopus Energy Group\",\n        \"avg_rating\": 4.4\n    },\n    {\n        \"company\": \"Kazaar\",\n        \"avg_rating\": 4.4\n    },\n    {\n        \"company\": \"WiSEED\",\n        \"avg_rating\": 4.4\n    },\n    {\n        \"company\": \"Groupe Editor\",\n        \"avg_rating\": 4.4\n    },\n    {\n        \"company\": \"BLOOMAYS\",\n        \"avg_rating\": 4.4\n    },\n    {\n        \"company\": \"Algolia\",\n        \"avg_rating\": 4.4\n    },\n    {\n        \"company\": \"Belacom\",\n        \"avg_rating\": 4.4\n    },\n    {\n        \"company\": \"Amarris France\",\n        \"avg_rating\": 4.3\n    },\n    {\n        \"company\": \"Bizon (Publicis Groupe)\",\n        \"avg_rating\": 4.3\n    },\n    {\n        \"company\": \"Artelys\",\n        \"avg_rating\": 4.3\n    },\n    {\n        \"company\": \"Ukio\",\n        \"avg_rating\": 4.3\n    },\n    {\n        \"company\": \"Voodoo\",\n        \"avg_rating\": 4.3\n    },\n    {\n        \"company\": \"Indy\",\n        \"avg_rating\": 4.3\n    },\n    {\n        \"company\": \"JALIOS\",\n        \"avg_rating\": 4.3\n    },\n    {\n        \"company\": \"TapNation\",\n        \"avg_rating\": 4.3\n    },\n    {\n        \"company\": \"Natixis\",\n        \"avg_rating\": 4.3\n    },\n    {\n        \"company\": \"Inria\",\n        \"avg_rating\": 4.3\n    },\n    {\n        \"company\": \"Parcome\",\n        \"avg_rating\": 4.3\n    },\n    {\n        \"company\": \"Wireless Logic\",\n        \"avg_rating\": 4.3\n    },\n    {\n        \"company\": \"Natixis SA\",\n        \"avg_rating\": 4.3\n    },\n    {\n        \"company\": \"Saphelec\",\n        \"avg_rating\": 4.3\n    },\n    {\n        \"company\": \"Les Petites Canailles\",\n        \"avg_rating\": 4.3\n    },\n    {\n        \"company\": \"LUCERNYS\",\n        \"avg_rating\": 4.3\n    },\n    {\n        \"company\": \"ActiveViam\",\n        \"avg_rating\": 4.3\n    },\n    {\n        \"company\": \"Capital Fund Management\",\n        \"avg_rating\": 4.3\n    },\n    {\n        \"company\": \"Pharmaplan SAS\",\n        \"avg_rating\": 4.3\n    },\n    {\n        \"company\": \"Cargobase\",\n        \"avg_rating\": 4.2\n    },\n    {\n        \"company\": \"Axone Data\",\n        \"avg_rating\": 4.2\n    },\n    {\n        \"company\": \"Yousign\",\n        \"avg_rating\": 4.2\n    },\n    {\n        \"company\": \"LACO\",\n        \"avg_rating\": 4.2\n    },\n    {\n        \"company\": \"Tiime\",\n        \"avg_rating\": 4.2\n    },\n    {\n        \"company\": \"Open-Xchange GmbH\",\n        \"avg_rating\": 4.2\n    },\n    {\n        \"company\": \"CLOSTERA\",\n        \"avg_rating\": 4.2\n    },\n    {\n        \"company\": \"Roquette\",\n        \"avg_rating\": 4.2\n    },\n    {\n        \"company\": \"Swile\",\n        \"avg_rating\": 4.2\n    },\n    {\n        \"company\": \"Partoo\",\n        \"avg_rating\": 4.2\n    },\n    {\n        \"company\": \"Reqiva ltd\",\n        \"avg_rating\": 4.2\n    },\n    {\n        \"company\": \"ILF Beratende Ingnieure\",\n        \"avg_rating\": 4.2\n    },\n    {\n        \"company\": \"Les Bons Artisans\",\n        \"avg_rating\": 4.2\n    },\n    {\n        \"company\": \"Endress+Hauser S.A.S.U.\",\n        \"avg_rating\": 4.2\n    },\n    {\n        \"company\": \"SAP\",\n        \"avg_rating\": 4.2\n    },\n    {\n        \"company\": \"ENR'J\",\n        \"avg_rating\": 4.2\n    },\n    {\n        \"company\": \"AXA\",\n        \"avg_rating\": 4.1\n    },\n    {\n        \"company\": \"l'Oréal\",\n        \"avg_rating\": 4.1\n    },\n    {\n        \"company\": \"Keyrus Life Science\",\n        \"avg_rating\": 4.1\n    },\n    {\n        \"company\": \"Noveo\",\n        \"avg_rating\": 4.1\n    },\n    {\n        \"company\": \"EDF Renouvelables\",\n        \"avg_rating\": 4.1\n    },\n    {\n        \"company\": \"L'atelier des Chefs\",\n        \"avg_rating\": 4.1\n    },\n    {\n        \"company\": \"Sarbacane Software\",\n        \"avg_rating\": 4.1\n    },\n    {\n        \"company\": \"APOLLO - CODING LIFE\",\n        \"avg_rating\": 4.1\n    },\n    {\n        \"company\": \"Ayming\",\n        \"avg_rating\": 4.1\n    },\n    {\n        \"company\": \"AVL LMM S.A.S.\",\n        \"avg_rating\": 4.1\n    },\n    {\n        \"company\": \"Mistertemp' group\",\n        \"avg_rating\": 4.1\n    },\n    {\n        \"company\": \"Ad4Screen\",\n        \"avg_rating\": 4.1\n    },\n    {\n        \"company\": \"Acseo\",\n        \"avg_rating\": 4.1\n    },\n    {\n        \"company\": \"Crédit Agricole Personal Finance & Mobility\",\n        \"avg_rating\": 4.1\n    },\n    {\n        \"company\": \"Edenred\",\n        \"avg_rating\": 4.1\n    },\n    {\n        \"company\": \"EUROCONTROL - Supporting European Aviation\",\n        \"avg_rating\": 4.1\n    },\n    {\n        \"company\": \"Agregio Solutions\",\n        \"avg_rating\": 4.1\n    },\n    {\n        \"company\": \"Greenbull Nutrition\",\n        \"avg_rating\": 4.1\n    },\n    {\n        \"company\": \"Médias France\",\n        \"avg_rating\": 4.1\n    },\n    {\n        \"company\": \"PMU\",\n        \"avg_rating\": 4.1\n    },\n    {\n        \"company\": \"American Express Global Business Travel\",\n        \"avg_rating\": 4.1\n    },\n    {\n        \"company\": \"Siemens\",\n        \"avg_rating\": 4.1\n    },\n    {\n        \"company\": \"Atelier Brâam\",\n        \"avg_rating\": 4.1\n    },\n    {\n        \"company\": \"OXYGRAVURE\",\n        \"avg_rating\": 4.1\n    },\n    {\n        \"company\": \"Apple\",\n        \"avg_rating\": 4.1\n    },\n    {\n        \"company\": \"OVRSEA\",\n        \"avg_rating\": 4.1\n    },\n    {\n        \"company\": \"Planity\",\n        \"avg_rating\": 4.1\n    },\n    {\n        \"company\": \"Converteo\",\n        \"avg_rating\": 4\n    },\n    {\n        \"company\": \"Assessfirst\",\n        \"avg_rating\": 4\n    },\n    {\n        \"company\": \"CAPSA CONTAINER\",\n        \"avg_rating\": 4\n    },\n    {\n        \"company\": \"McKinsey & Company\",\n        \"avg_rating\": 4\n    },\n    {\n        \"company\": \"Sollers Consulting\",\n        \"avg_rating\": 4\n    },\n    {\n        \"company\": \"POK\",\n        \"avg_rating\": 4\n    },\n    {\n        \"company\": \"F. Initiatives\",\n        \"avg_rating\": 4\n    },\n    {\n        \"company\": \"Libon\",\n        \"avg_rating\": 4\n    },\n    {\n        \"company\": \"Groupe Les Echos Le Parisien\",\n        \"avg_rating\": 4\n    },\n    {\n        \"company\": \"Lesaffre\",\n        \"avg_rating\": 4\n    },\n    {\n        \"company\": \"United Nations\",\n        \"avg_rating\": 4\n    },\n    {\n        \"company\": \"PI ELECTRONIQUE\",\n        \"avg_rating\": 4\n    },\n    {\n        \"company\": \"Ecole Gustave\",\n        \"avg_rating\": 4\n    },\n    {\n        \"company\": \"Cintoo SAS\",\n        \"avg_rating\": 4\n    },\n    {\n        \"company\": \"Naval Group\",\n        \"avg_rating\": 4\n    },\n    {\n        \"company\": \"LE GOURMET DE PARIS\",\n        \"avg_rating\": 4\n    },\n    {\n        \"company\": \"Nature et découvertes\",\n        \"avg_rating\": 4\n    },\n    {\n        \"company\": \"DoubleVerify\",\n        \"avg_rating\": 4\n    },\n    {\n        \"company\": \"Brevo\",\n        \"avg_rating\": 4\n    },\n    {\n        \"company\": \"Web et Vous\",\n        \"avg_rating\": 4\n    },\n    {\n        \"company\": \"NOVAL\",\n        \"avg_rating\": 4\n    },\n    {\n        \"company\": \"Pretto\",\n        \"avg_rating\": 4\n    },\n    {\n        \"company\": \"Gartner\",\n        \"avg_rating\": 4\n    },\n    {\n        \"company\": \"BOLD Digital\",\n        \"avg_rating\": 4\n    },\n    {\n        \"company\": \"Live Nation\",\n        \"avg_rating\": 4\n    },\n    {\n        \"company\": \"Homa\",\n        \"avg_rating\": 4\n    },\n    {\n        \"company\": \"Datadog\",\n        \"avg_rating\": 4\n    },\n    {\n        \"company\": \"DISCURV\",\n        \"avg_rating\": 4\n    },\n    {\n        \"company\": \"Corsearch\",\n        \"avg_rating\": 4\n    },\n    {\n        \"company\": \"Bel Group\",\n        \"avg_rating\": 4\n    },\n    {\n        \"company\": \"Nutri&Co\",\n        \"avg_rating\": 4\n    },\n    {\n        \"company\": \"The Exploration Company\",\n        \"avg_rating\": 4\n    },\n    {\n        \"company\": \"Kaplan Languages Group\",\n        \"avg_rating\": 4\n    },\n    {\n        \"company\": \"CAILabs\",\n        \"avg_rating\": 4\n    },\n    {\n        \"company\": \"Bouygues Telecom\",\n        \"avg_rating\": 4\n    },\n    {\n        \"company\": \"Prismic\",\n        \"avg_rating\": 4\n    },\n    {\n        \"company\": \"MEDIAPOSTE\",\n        \"avg_rating\": 4\n    },\n    {\n        \"company\": \"Séché Environnement\",\n        \"avg_rating\": 4\n    },\n    {\n        \"company\": \"Econsulting\",\n        \"avg_rating\": 4\n    },\n    {\n        \"company\": \"Spill\",\n        \"avg_rating\": 3.9\n    },\n    {\n        \"company\": \"Puratos\",\n        \"avg_rating\": 3.9\n    },\n    {\n        \"company\": \"Wavestone\",\n        \"avg_rating\": 3.9\n    },\n    {\n        \"company\": \"Voyage Privé\",\n        \"avg_rating\": 3.9\n    },\n    {\n        \"company\": \"Illinois Tool Works\",\n        \"avg_rating\": 3.9\n    },\n    {\n        \"company\": \"IMCD FRANCE\",\n        \"avg_rating\": 3.9\n    },\n    {\n        \"company\": \"AB Tasty\",\n        \"avg_rating\": 3.9\n    },\n    {\n        \"company\": \"Margo Conseil\",\n        \"avg_rating\": 3.9\n    },\n    {\n        \"company\": \"ECTOR\",\n        \"avg_rating\": 3.9\n    },\n    {\n        \"company\": \"Enigmatic\",\n        \"avg_rating\": 3.9\n    },\n    {\n        \"company\": \"Shift Technology\",\n        \"avg_rating\": 3.9\n    },\n    {\n        \"company\": \"SUEZ\",\n        \"avg_rating\": 3.9\n    },\n    {\n        \"company\": \"Liftoff\",\n        \"avg_rating\": 3.9\n    },\n    {\n        \"company\": \"Concentrix\",\n        \"avg_rating\": 3.9\n    },\n    {\n        \"company\": \"Euklid\",\n        \"avg_rating\": 3.9\n    },\n    {\n        \"company\": \"Valeo\",\n        \"avg_rating\": 3.9\n    },\n    {\n        \"company\": \"Artelia\",\n        \"avg_rating\": 3.9\n    },\n    {\n        \"company\": \"Integrity360\",\n        \"avg_rating\": 3.9\n    },\n    {\n        \"company\": \"Veolia\",\n        \"avg_rating\": 3.9\n    },\n    {\n        \"company\": \"Teract\",\n        \"avg_rating\": 3.9\n    },\n    {\n        \"company\": \"KBRW\",\n        \"avg_rating\": 3.9\n    },\n    {\n        \"company\": \"Novencia\",\n        \"avg_rating\": 3.9\n    },\n    {\n        \"company\": \"BIC\",\n        \"avg_rating\": 3.9\n    },\n    {\n        \"company\": \"Point72\",\n        \"avg_rating\": 3.9\n    },\n    {\n        \"company\": \"Carrevolutis\",\n        \"avg_rating\": 3.9\n    },\n    {\n        \"company\": \"STEVE GATES\",\n        \"avg_rating\": 3.9\n    },\n    {\n        \"company\": \"Tudigo\",\n        \"avg_rating\": 3.9\n    },\n    {\n        \"company\": \"Reinsurance Group of America\",\n        \"avg_rating\": 3.9\n    },\n    {\n        \"company\": \"Icademie\",\n        \"avg_rating\": 3.9\n    },\n    {\n        \"company\": \"Smile Group\",\n        \"avg_rating\": 3.9\n    },\n    {\n        \"company\": \"Invivoo\",\n        \"avg_rating\": 3.9\n    },\n    {\n        \"company\": \"D-EDGE\",\n        \"avg_rating\": 3.9\n    },\n    {\n        \"company\": \"ITW Construction - Continental Europe\",\n        \"avg_rating\": 3.9\n    },\n    {\n        \"company\": \"Lengow\",\n        \"avg_rating\": 3.9\n    },\n    {\n        \"company\": \"BD\",\n        \"avg_rating\": 3.8\n    },\n    {\n        \"company\": \"GROUPE AIRWELL\",\n        \"avg_rating\": 3.8\n    },\n    {\n        \"company\": \"AVERY\",\n        \"avg_rating\": 3.8\n    },\n    {\n        \"company\": \"NielsenIQ\",\n        \"avg_rating\": 3.8\n    },\n    {\n        \"company\": \"HappyPal\",\n        \"avg_rating\": 3.8\n    },\n    {\n        \"company\": \"The New York Times\",\n        \"avg_rating\": 3.8\n    },\n    {\n        \"company\": \"ZEROSIX\",\n        \"avg_rating\": 3.8\n    },\n    {\n        \"company\": \"ALSTOM\",\n        \"avg_rating\": 3.8\n    },\n    {\n        \"company\": \"Weezevent World\",\n        \"avg_rating\": 3.8\n    },\n    {\n        \"company\": \"Philips\",\n        \"avg_rating\": 3.8\n    },\n    {\n        \"company\": \"ADVIZEO\",\n        \"avg_rating\": 3.8\n    },\n    {\n        \"company\": \"Air Liquide\",\n        \"avg_rating\": 3.8\n    },\n    {\n        \"company\": \"FACTEM\",\n        \"avg_rating\": 3.8\n    },\n    {\n        \"company\": \"Avery Dennison\",\n        \"avg_rating\": 3.8\n    },\n    {\n        \"company\": \"MediaGeniX\",\n        \"avg_rating\": 3.8\n    },\n    {\n        \"company\": \"Abbott Laboratories\",\n        \"avg_rating\": 3.8\n    },\n    {\n        \"company\": \"ManoMano\",\n        \"avg_rating\": 3.8\n    },\n    {\n        \"company\": \"BNP Paribas\",\n        \"avg_rating\": 3.8\n    },\n    {\n        \"company\": \"CAST Software Inc.\",\n        \"avg_rating\": 3.8\n    },\n    {\n        \"company\": \"AKQA\",\n        \"avg_rating\": 3.8\n    },\n    {\n        \"company\": \"IENA\",\n        \"avg_rating\": 3.8\n    },\n    {\n        \"company\": \"Doctolib\",\n        \"avg_rating\": 3.8\n    },\n    {\n        \"company\": \"Euridis Ecole de Commerce\",\n        \"avg_rating\": 3.7999999999999994\n    },\n    {\n        \"company\": \"EY\",\n        \"avg_rating\": 3.7000000000000006\n    },\n    {\n        \"company\": \"The Flex\",\n        \"avg_rating\": 3.7\n    },\n    {\n        \"company\": \"Eiffage Énergie Systèmes\",\n        \"avg_rating\": 3.7\n    },\n    {\n        \"company\": \"LSEG (London Stock Exchange Group)\",\n        \"avg_rating\": 3.7\n    },\n    {\n        \"company\": \"emagine Consulting SARL\",\n        \"avg_rating\": 3.7\n    },\n    {\n        \"company\": \"Worldia\",\n        \"avg_rating\": 3.7\n    },\n    {\n        \"company\": \"Franprix\",\n        \"avg_rating\": 3.7\n    },\n    {\n        \"company\": \"Descours & Cabaud\",\n        \"avg_rating\": 3.7\n    },\n    {\n        \"company\": \"EXCHANGE COLLEGE\",\n        \"avg_rating\": 3.7\n    },\n    {\n        \"company\": \"Slidor\",\n        \"avg_rating\": 3.7\n    },\n    {\n        \"company\": \"Zucchetti France\",\n        \"avg_rating\": 3.7\n    },\n    {\n        \"company\": \"Beam Inc.\",\n        \"avg_rating\": 3.7\n    },\n    {\n        \"company\": \"Regicom\",\n        \"avg_rating\": 3.7\n    },\n    {\n        \"company\": \"N-Zone\",\n        \"avg_rating\": 3.7\n    },\n    {\n        \"company\": \"Altavia\",\n        \"avg_rating\": 3.7\n    },\n    {\n        \"company\": \"OVHcloud\",\n        \"avg_rating\": 3.7\n    },\n    {\n        \"company\": \"Hireos\",\n        \"avg_rating\": 3.7\n    },\n    {\n        \"company\": \"ITSS\",\n        \"avg_rating\": 3.7\n    },\n    {\n        \"company\": \"Amentum\",\n        \"avg_rating\": 3.7\n    },\n    {\n        \"company\": \"papernest\",\n        \"avg_rating\": 3.7\n    },\n    {\n        \"company\": \"BDO France\",\n        \"avg_rating\": 3.6\n    },\n    {\n        \"company\": \"Jahia\",\n        \"avg_rating\": 3.6\n    },\n    {\n        \"company\": \"CY Cergy-Paris Université\",\n        \"avg_rating\": 3.6\n    },\n    {\n        \"company\": \"Neovity\",\n        \"avg_rating\": 3.6\n    },\n    {\n        \"company\": \"PAKi Logistics GmbH\",\n        \"avg_rating\": 3.6\n    },\n    {\n        \"company\": \"TAC-TIC MEDIA\",\n        \"avg_rating\": 3.6\n    },\n    {\n        \"company\": \"CEVA\",\n        \"avg_rating\": 3.6\n    },\n    {\n        \"company\": \"Sparteo\",\n        \"avg_rating\": 3.6\n    },\n    {\n        \"company\": \"Ubisoft\",\n        \"avg_rating\": 3.6\n    },\n    {\n        \"company\": \"KANTAR\",\n        \"avg_rating\": 3.6\n    },\n    {\n        \"company\": \"Visiativ\",\n        \"avg_rating\": 3.6\n    },\n    {\n        \"company\": \"MACK One\",\n        \"avg_rating\": 3.6\n    },\n    {\n        \"company\": \"Groupe Fnac Darty\",\n        \"avg_rating\": 3.6\n    },\n    {\n        \"company\": \"Würth France\",\n        \"avg_rating\": 3.6\n    },\n    {\n        \"company\": \"SFR\",\n        \"avg_rating\": 3.6\n    },\n    {\n        \"company\": \"SBS\",\n        \"avg_rating\": 3.6\n    },\n    {\n        \"company\": \"Actimage\",\n        \"avg_rating\": 3.6\n    },\n    {\n        \"company\": \"iBanFirst\",\n        \"avg_rating\": 3.6\n    },\n    {\n        \"company\": \"La Redoute\",\n        \"avg_rating\": 3.6\n    },\n    {\n        \"company\": \"Page Personnel\",\n        \"avg_rating\": 3.6\n    },\n    {\n        \"company\": \"Nalys\",\n        \"avg_rating\": 3.6\n    },\n    {\n        \"company\": \"Ornikar\",\n        \"avg_rating\": 3.6\n    },\n    {\n        \"company\": \"CENTUM T&S\",\n        \"avg_rating\": 3.6\n    },\n    {\n        \"company\": \"Hutchinson\",\n        \"avg_rating\": 3.6\n    },\n    {\n        \"company\": \"Groupe Panzani\",\n        \"avg_rating\": 3.6\n    },\n    {\n        \"company\": \"Substances Actives\",\n        \"avg_rating\": 3.6\n    },\n    {\n        \"company\": \"Eatwith\",\n        \"avg_rating\": 3.6\n    },\n    {\n        \"company\": \"MACSF\",\n        \"avg_rating\": 3.6\n    },\n    {\n        \"company\": \"Soprema\",\n        \"avg_rating\": 3.6\n    },\n    {\n        \"company\": \"MIS Group\",\n        \"avg_rating\": 3.6\n    },\n    {\n        \"company\": \"IMS Networks\",\n        \"avg_rating\": 3.6\n    },\n    {\n        \"company\": \"Groupe LDLC\",\n        \"avg_rating\": 3.6\n    },\n    {\n        \"company\": \"FUCHS LUBRIFIANT FRANCE S.A.\",\n        \"avg_rating\": 3.6\n    },\n    {\n        \"company\": \"Oktogone Group\",\n        \"avg_rating\": 3.5\n    },\n    {\n        \"company\": \"APRIL\",\n        \"avg_rating\": 3.5\n    },\n    {\n        \"company\": \"COLLEGE DE PARIS\",\n        \"avg_rating\": 3.5\n    },\n    {\n        \"company\": \"Groupe Eram\",\n        \"avg_rating\": 3.5\n    },\n    {\n        \"company\": \"Cencora\",\n        \"avg_rating\": 3.5\n    },\n    {\n        \"company\": \"Capgemini Engineering\",\n        \"avg_rating\": 3.5\n    },\n    {\n        \"company\": \"Socotec\",\n        \"avg_rating\": 3.5\n    },\n    {\n        \"company\": \"Ephemere Square\",\n        \"avg_rating\": 3.5\n    },\n    {\n        \"company\": \"idex\",\n        \"avg_rating\": 3.5\n    },\n    {\n        \"company\": \"SWIZY\",\n        \"avg_rating\": 3.5\n    },\n    {\n        \"company\": \"MarketingScan\",\n        \"avg_rating\": 3.5\n    },\n    {\n        \"company\": \"team.blue Global\",\n        \"avg_rating\": 3.5\n    },\n    {\n        \"company\": \"NEXTON\",\n        \"avg_rating\": 3.5\n    },\n    {\n        \"company\": \"Altirnao\",\n        \"avg_rating\": 3.5\n    },\n    {\n        \"company\": \"Dougs\",\n        \"avg_rating\": 3.5\n    },\n    {\n        \"company\": \"Leyton\",\n        \"avg_rating\": 3.5\n    },\n    {\n        \"company\": \"Keyrus Life Science France\",\n        \"avg_rating\": 3.4\n    },\n    {\n        \"company\": \"Veesion\",\n        \"avg_rating\": 3.4\n    },\n    {\n        \"company\": \"DentalMonitoring\",\n        \"avg_rating\": 3.4\n    },\n    {\n        \"company\": \"Open SAS\",\n        \"avg_rating\": 3.4\n    },\n    {\n        \"company\": \"PKF Arsilon\",\n        \"avg_rating\": 3.4\n    },\n    {\n        \"company\": \"Epsilon - Alcen\",\n        \"avg_rating\": 3.4\n    },\n    {\n        \"company\": \"Groupe Ortec\",\n        \"avg_rating\": 3.4\n    },\n    {\n        \"company\": \"Tessan\",\n        \"avg_rating\": 3.4\n    },\n    {\n        \"company\": \"Altares-D&B\",\n        \"avg_rating\": 3.4\n    },\n    {\n        \"company\": \"IBS Group\",\n        \"avg_rating\": 3.4\n    },\n    {\n        \"company\": \"ALTERSIS\",\n        \"avg_rating\": 3.4\n    },\n    {\n        \"company\": \"METRO France\",\n        \"avg_rating\": 3.4\n    },\n    {\n        \"company\": \"Segula Technologies\",\n        \"avg_rating\": 3.4\n    },\n    {\n        \"company\": \"Splayce\",\n        \"avg_rating\": 3.4\n    },\n    {\n        \"company\": \"Compagnie Fiduciaire\",\n        \"avg_rating\": 3.4\n    },\n    {\n        \"company\": \"Dayuse\",\n        \"avg_rating\": 3.4\n    },\n    {\n        \"company\": \"INSIA\",\n        \"avg_rating\": 3.4\n    },\n    {\n        \"company\": \"Impact Sales & Marketing\",\n        \"avg_rating\": 3.4\n    },\n    {\n        \"company\": \"VALD\",\n        \"avg_rating\": 3.3\n    },\n    {\n        \"company\": \"CHRONOPOST\",\n        \"avg_rating\": 3.3\n    },\n    {\n        \"company\": \"HeadMind Partners\",\n        \"avg_rating\": 3.3\n    },\n    {\n        \"company\": \"Péters Surgical\",\n        \"avg_rating\": 3.3\n    },\n    {\n        \"company\": \"Ouidou\",\n        \"avg_rating\": 3.3\n    },\n    {\n        \"company\": \"SGS\",\n        \"avg_rating\": 3.3\n    },\n    {\n        \"company\": \"Quadpack Group\",\n        \"avg_rating\": 3.3\n    },\n    {\n        \"company\": \"Conforama\",\n        \"avg_rating\": 3.3\n    },\n    {\n        \"company\": \"CMA IDF\",\n        \"avg_rating\": 3.3\n    },\n    {\n        \"company\": \"All'in Consulting\",\n        \"avg_rating\": 3.3\n    },\n    {\n        \"company\": \"native\",\n        \"avg_rating\": 3.3\n    },\n    {\n        \"company\": \"Ponticelli\",\n        \"avg_rating\": 3.3\n    },\n    {\n        \"company\": \"Figaro classifieds\",\n        \"avg_rating\": 3.3\n    },\n    {\n        \"company\": \"DriiveMe\",\n        \"avg_rating\": 3.3\n    },\n    {\n        \"company\": \"Alkegen\",\n        \"avg_rating\": 3.3\n    },\n    {\n        \"company\": \"Nextgen RH\",\n        \"avg_rating\": 3.3\n    },\n    {\n        \"company\": \"EOWIN\",\n        \"avg_rating\": 3.3\n    },\n    {\n        \"company\": \"Maisons Du Monde\",\n        \"avg_rating\": 3.3\n    },\n    {\n        \"company\": \"Berger-Levrault\",\n        \"avg_rating\": 3.3\n    },\n    {\n        \"company\": \"CHRONOFRESH\",\n        \"avg_rating\": 3.3\n    },\n    {\n        \"company\": \"Paritel\",\n        \"avg_rating\": 3.3\n    },\n    {\n        \"company\": \"Vestiaire Collective\",\n        \"avg_rating\": 3.3\n    },\n    {\n        \"company\": \"Eviden\",\n        \"avg_rating\": 3.3\n    },\n    {\n        \"company\": \"FINALEASE GROUP SECURITY\",\n        \"avg_rating\": 3.2\n    },\n    {\n        \"company\": \"Recom\",\n        \"avg_rating\": 3.2\n    },\n    {\n        \"company\": \"TikTok\",\n        \"avg_rating\": 3.2\n    },\n    {\n        \"company\": \"American Hospital of Paris\",\n        \"avg_rating\": 3.2\n    },\n    {\n        \"company\": \"Menway\",\n        \"avg_rating\": 3.2\n    },\n    {\n        \"company\": \"Pixmania\",\n        \"avg_rating\": 3.2\n    },\n    {\n        \"company\": \"Gaminho\",\n        \"avg_rating\": 3.2\n    },\n    {\n        \"company\": \"ALFI\",\n        \"avg_rating\": 3.2\n    },\n    {\n        \"company\": \"Harvest\",\n        \"avg_rating\": 3.2\n    },\n    {\n        \"company\": \"Greenkub\",\n        \"avg_rating\": 3.2\n    },\n    {\n        \"company\": \"CORDON ELECTRONICS\",\n        \"avg_rating\": 3.1\n    },\n    {\n        \"company\": \"Koesio\",\n        \"avg_rating\": 3.1\n    },\n    {\n        \"company\": \"Technology & Strategy\",\n        \"avg_rating\": 3.1\n    },\n    {\n        \"company\": \"Eureka Education\",\n        \"avg_rating\": 3.1\n    },\n    {\n        \"company\": \"Signaturit Group\",\n        \"avg_rating\": 3.1\n    },\n    {\n        \"company\": \"ADEENA\",\n        \"avg_rating\": 3.1\n    },\n    {\n        \"company\": \"HCube Conseil\",\n        \"avg_rating\": 3.1\n    },\n    {\n        \"company\": \"UnderDefense\",\n        \"avg_rating\": 3.1\n    },\n    {\n        \"company\": \"EPSA Transfo & Digital\",\n        \"avg_rating\": 3.1\n    },\n    {\n        \"company\": \"Cegid\",\n        \"avg_rating\": 3.1\n    },\n    {\n        \"company\": \"Itancia\",\n        \"avg_rating\": 3.1\n    },\n    {\n        \"company\": \"Kroely\",\n        \"avg_rating\": 3.1\n    },\n    {\n        \"company\": \"Ingéniance\",\n        \"avg_rating\": 3.1\n    },\n    {\n        \"company\": \"LHH Recruitment Solutions\",\n        \"avg_rating\": 3.05\n    },\n    {\n        \"company\": \"Mondial Relay\",\n        \"avg_rating\": 3\n    },\n    {\n        \"company\": \"singulart\",\n        \"avg_rating\": 3\n    },\n    {\n        \"company\": \"Econocom\",\n        \"avg_rating\": 3\n    },\n    {\n        \"company\": \"Dominion Global France\",\n        \"avg_rating\": 3\n    },\n    {\n        \"company\": \"Bertrand Franchise\",\n        \"avg_rating\": 3\n    },\n    {\n        \"company\": \"MONDASSUR\",\n        \"avg_rating\": 3\n    },\n    {\n        \"company\": \"EXCELLIANCE Dijon\",\n        \"avg_rating\": 3\n    },\n    {\n        \"company\": \"FineDigit\",\n        \"avg_rating\": 3\n    },\n    {\n        \"company\": \"Nhood\",\n        \"avg_rating\": 3\n    },\n    {\n        \"company\": \"kodemade\",\n        \"avg_rating\": 3\n    },\n    {\n        \"company\": \"PRESENCE VERTE SA\",\n        \"avg_rating\": 3\n    },\n    {\n        \"company\": \"REVITACARE\",\n        \"avg_rating\": 3\n    },\n    {\n        \"company\": \"Pages Jaunes / Solocal\",\n        \"avg_rating\": 3\n    },\n    {\n        \"company\": \"PLAY\",\n        \"avg_rating\": 3\n    },\n    {\n        \"company\": \"ROZO\",\n        \"avg_rating\": 3\n    },\n    {\n        \"company\": \"Qualimetrie\",\n        \"avg_rating\": 3\n    },\n    {\n        \"company\": \"Eurofins France\",\n        \"avg_rating\": 3\n    },\n    {\n        \"company\": \"Licorne Society\",\n        \"avg_rating\": 3\n    },\n    {\n        \"company\": \"GROUPE DERET\",\n        \"avg_rating\": 3\n    },\n    {\n        \"company\": \"Maison Davoise\",\n        \"avg_rating\": 3\n    },\n    {\n        \"company\": \"MyUnisoft\",\n        \"avg_rating\": 3\n    },\n    {\n        \"company\": \"ZEborne\",\n        \"avg_rating\": 2.9\n    },\n    {\n        \"company\": \"Groupe CF\",\n        \"avg_rating\": 2.9\n    },\n    {\n        \"company\": \"Galileo Global Education France\",\n        \"avg_rating\": 2.9\n    },\n    {\n        \"company\": \"SCRIBEO\",\n        \"avg_rating\": 2.9\n    },\n    {\n        \"company\": \"JIA PARIS\",\n        \"avg_rating\": 2.9\n    },\n    {\n        \"company\": \"Mazeberry\",\n        \"avg_rating\": 2.9\n    },\n    {\n        \"company\": \"Groupe ROS\",\n        \"avg_rating\": 2.9\n    },\n    {\n        \"company\": \"Collectif Energie\",\n        \"avg_rating\": 2.9\n    },\n    {\n        \"company\": \"NBS System\",\n        \"avg_rating\": 2.8\n    },\n    {\n        \"company\": \"Soft-Concept\",\n        \"avg_rating\": 2.8\n    },\n    {\n        \"company\": \"Securitas Technology\",\n        \"avg_rating\": 2.7000000000000006\n    },\n    {\n        \"company\": \"Péritis\",\n        \"avg_rating\": 2.7\n    },\n    {\n        \"company\": \"ENSUP\",\n        \"avg_rating\": 2.7\n    },\n    {\n        \"company\": \"OMS SYNERGIE\",\n        \"avg_rating\": 2.7\n    },\n    {\n        \"company\": \"Rydge\",\n        \"avg_rating\": 2.7\n    },\n    {\n        \"company\": \"ISCOD\",\n        \"avg_rating\": 2.600000000000001\n    },\n    {\n        \"company\": \"Sober Spirits\",\n        \"avg_rating\": 2.6\n    },\n    {\n        \"company\": \"Avent Media\",\n        \"avg_rating\": 2.6\n    },\n    {\n        \"company\": \"Leaseo\",\n        \"avg_rating\": 2.6\n    },\n    {\n        \"company\": \"École M\",\n        \"avg_rating\": 2.5\n    },\n    {\n        \"company\": \"MedQuest\",\n        \"avg_rating\": 2.5\n    },\n    {\n        \"company\": \"ALBHADES PROVENCE\",\n        \"avg_rating\": 2.5\n    },\n    {\n        \"company\": \"The BRIDGE Ecole-Entreprises\",\n        \"avg_rating\": 2.5\n    },\n    {\n        \"company\": \"POWERLING\",\n        \"avg_rating\": 2.4\n    },\n    {\n        \"company\": \"SpikeeLabs\",\n        \"avg_rating\": 2.4\n    },\n    {\n        \"company\": \"Univers NOZ\",\n        \"avg_rating\": 2.4\n    },\n    {\n        \"company\": \"AMEG GROUP\",\n        \"avg_rating\": 2.4\n    },\n    {\n        \"company\": \"KLEEVER\",\n        \"avg_rating\": 2.4\n    },\n    {\n        \"company\": \"TOHTEM IT\",\n        \"avg_rating\": 2.4\n    },\n    {\n        \"company\": \"SEFEE\",\n        \"avg_rating\": 2.3\n    },\n    {\n        \"company\": \"Joivy\",\n        \"avg_rating\": 2.2\n    },\n    {\n        \"company\": \"Unami\",\n        \"avg_rating\": 2\n    },\n    {\n        \"company\": \"Metaverse college\",\n        \"avg_rating\": 2\n    },\n    {\n        \"company\": \"ACCELITE\",\n        \"avg_rating\": 2\n    },\n    {\n        \"company\": \"ACCORDIA\",\n        \"avg_rating\": 1.8\n    },\n    {\n        \"company\": \"BIOMEN\",\n        \"avg_rating\": 1.5\n    },\n    {\n        \"company\": \"CF2i\",\n        \"avg_rating\": 1.4\n    },\n    {\n        \"company\": \"Le Média Positif SAS\",\n        \"avg_rating\": 1\n    },\n    {\n        \"company\": \"OpSales\",\n        \"avg_rating\": 1\n    },\n    {\n        \"company\": \"HELFRICH FARRJOP\",\n        \"avg_rating\": 1\n    },\n    {\n        \"company\": \"MindSearch\",\n        \"avg_rating\": 1\n    }\n]"
+				}
+			]
+		},
+		{
+			"name": "github popuular project",
+			"request": {
+				"method": "GET",
+				"header": []
+			},
+			"response": [
+				{
+					"name": "top rating entreprise average Copy",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": "http://localhost:8000/api/v1/github/top/"
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Date",
+							"value": "Fri, 04 Jul 2025 12:17:00 GMT"
+						},
+						{
+							"key": "Server",
+							"value": "WSGIServer/0.2 CPython/3.12.6"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Vary",
+							"value": "Accept"
+						},
+						{
+							"key": "Allow",
+							"value": "OPTIONS, GET"
+						},
+						{
+							"key": "X-Frame-Options",
+							"value": "DENY"
+						},
+						{
+							"key": "Content-Length",
+							"value": "426"
+						},
+						{
+							"key": "X-Content-Type-Options",
+							"value": "nosniff"
+						},
+						{
+							"key": "Referrer-Policy",
+							"value": "same-origin"
+						},
+						{
+							"key": "Cross-Origin-Opener-Policy",
+							"value": "same-origin"
+						}
+					],
+					"cookie": [],
+					"body": "[\n    {\n        \"name\": \"twenty\",\n        \"stars_period\": 1244\n    },\n    {\n        \"name\": \"Graphite\",\n        \"stars_period\": 1162\n    },\n    {\n        \"name\": \"storm\",\n        \"stars_period\": 615\n    },\n    {\n        \"name\": \"generative-ai-for-beginners\",\n        \"stars_period\": 414\n    },\n    {\n        \"name\": \"firecrawl\",\n        \"stars_period\": 330\n    },\n    {\n        \"name\": \"PayloadsAllTheThings\",\n        \"stars_period\": 240\n    },\n    {\n        \"name\": \"midday\",\n        \"stars_period\": 161\n    },\n    {\n        \"name\": \"ottomator-agents\",\n        \"stars_period\": 150\n    },\n    {\n        \"name\": \"wallet-gen\",\n        \"stars_period\": 123\n    },\n    {\n        \"name\": \"deck.gl\",\n        \"stars_period\": 97\n    }\n]"
+				}
+			]
+		},
+		{
+			"name": "job mos demande",
+			"request": {
+				"method": "GET",
+				"header": []
+			},
+			"response": [
+				{
+					"name": "New Request",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": "http://localhost:8000/api/v1/joboffers/most_demanded/"
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Date",
+							"value": "Fri, 04 Jul 2025 12:17:07 GMT"
+						},
+						{
+							"key": "Server",
+							"value": "WSGIServer/0.2 CPython/3.12.6"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Vary",
+							"value": "Accept"
+						},
+						{
+							"key": "Allow",
+							"value": "OPTIONS, GET"
+						},
+						{
+							"key": "X-Frame-Options",
+							"value": "DENY"
+						},
+						{
+							"key": "Content-Length",
+							"value": "517"
+						},
+						{
+							"key": "X-Content-Type-Options",
+							"value": "nosniff"
+						},
+						{
+							"key": "Referrer-Policy",
+							"value": "same-origin"
+						},
+						{
+							"key": "Cross-Origin-Opener-Policy",
+							"value": "same-origin"
+						}
+					],
+					"cookie": [],
+					"body": "[\n    {\n        \"normalized_title\": \"\",\n        \"total\": 6825\n    },\n    {\n        \"normalized_title\": \"data engineer\",\n        \"total\": 285\n    },\n    {\n        \"normalized_title\": \"DevOps Engineer\",\n        \"total\": 198\n    },\n    {\n        \"normalized_title\": \"Senior Data Scientist\",\n        \"total\": 181\n    },\n    {\n        \"normalized_title\": \"business developer\",\n        \"total\": 167\n    },\n    {\n        \"normalized_title\": \"frontend developer\",\n        \"total\": 162\n    },\n    {\n        \"normalized_title\": \"data scientist\",\n        \"total\": 150\n    },\n    {\n        \"normalized_title\": \"software engineer\",\n        \"total\": 139\n    },\n    {\n        \"normalized_title\": \"python developer\",\n        \"total\": 118\n    },\n    {\n        \"normalized_title\": \"Senior Backend Engineer\",\n        \"total\": 109\n    }\n]"
+				}
+			]
+		},
+		{
+			"name": "job par entreprise",
+			"request": {
+				"method": "GET",
+				"header": []
+			},
+			"response": [
+				{
+					"name": "New Request",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8000/api/v1/joboffers/by_company/?title=data engineer",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"v1",
+								"joboffers",
+								"by_company",
+								""
+							],
+							"query": [
+								{
+									"key": "title",
+									"value": "data engineer"
+								}
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Date",
+							"value": "Fri, 04 Jul 2025 12:17:13 GMT"
+						},
+						{
+							"key": "Server",
+							"value": "WSGIServer/0.2 CPython/3.12.6"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Vary",
+							"value": "Accept"
+						},
+						{
+							"key": "Allow",
+							"value": "OPTIONS, GET"
+						},
+						{
+							"key": "X-Frame-Options",
+							"value": "DENY"
+						},
+						{
+							"key": "Content-Length",
+							"value": "4086"
+						},
+						{
+							"key": "X-Content-Type-Options",
+							"value": "nosniff"
+						},
+						{
+							"key": "Referrer-Policy",
+							"value": "same-origin"
+						},
+						{
+							"key": "Cross-Origin-Opener-Policy",
+							"value": "same-origin"
+						}
+					],
+					"cookie": [],
+					"body": "[\n    {\n        \"company\": \"JR Italy\",\n        \"total\": 72\n    },\n    {\n        \"company\": \"Selection 4.0 SA\",\n        \"total\": 26\n    },\n    {\n        \"company\": \"It's Prodigy\",\n        \"total\": 13\n    },\n    {\n        \"company\": \"Datumo\",\n        \"total\": 10\n    },\n    {\n        \"company\": \"GreenMinds Sp. z o.o.\",\n        \"total\": 6\n    },\n    {\n        \"company\": \"OVERACE GROUP\",\n        \"total\": 6\n    },\n    {\n        \"company\": \"Eminent Groep\",\n        \"total\": 5\n    },\n    {\n        \"company\": \"Link Group\",\n        \"total\": 5\n    },\n    {\n        \"company\": \"DCG\",\n        \"total\": 5\n    },\n    {\n        \"company\": \"Buscojobs\",\n        \"total\": 4\n    },\n    {\n        \"company\": \"in4ge sp. z o.o.\",\n        \"total\": 4\n    },\n    {\n        \"company\": \"Integrated Worlds GmbH\",\n        \"total\": 4\n    },\n    {\n        \"company\": \"Fincons Group\",\n        \"total\": 4\n    },\n    {\n        \"company\": null,\n        \"total\": 4\n    },\n    {\n        \"company\": \"solvistas\",\n        \"total\": 3\n    },\n    {\n        \"company\": \"Unit8\",\n        \"total\": 3\n    },\n    {\n        \"company\": \"SICIS\",\n        \"total\": 3\n    },\n    {\n        \"company\": \"BizAway S.r.l. \",\n        \"total\": 3\n    },\n    {\n        \"company\": \"BFF Banking Group\",\n        \"total\": 2\n    },\n    {\n        \"company\": \"Axiom Software Solutions Limited\",\n        \"total\": 2\n    },\n    {\n        \"company\": \"Sicis srl\",\n        \"total\": 2\n    },\n    {\n        \"company\": \"BizAway\",\n        \"total\": 2\n    },\n    {\n        \"company\": \"Experteer Italy\",\n        \"total\": 2\n    },\n    {\n        \"company\": \"MAW\",\n        \"total\": 2\n    },\n    {\n        \"company\": \"Prada Group\",\n        \"total\": 2\n    },\n    {\n        \"company\": \"Veneficus\",\n        \"total\": 2\n    },\n    {\n        \"company\": \"ShopFully Group\",\n        \"total\": 2\n    },\n    {\n        \"company\": \"watttron GmbH\",\n        \"total\": 2\n    },\n    {\n        \"company\": \"Wien Energie GmbH \",\n        \"total\": 2\n    },\n    {\n        \"company\": \"Yacht\",\n        \"total\": 2\n    },\n    {\n        \"company\": \"SThree Germany\",\n        \"total\": 2\n    },\n    {\n        \"company\": \"FYGI B.V.\",\n        \"total\": 2\n    },\n    {\n        \"company\": \"EIFFEL\",\n        \"total\": 2\n    },\n    {\n        \"company\": \"Jochen Schweizer mydays Holding GmbH\",\n        \"total\": 1\n    },\n    {\n        \"company\": \"KERN engineering careers GmbH \",\n        \"total\": 1\n    },\n    {\n        \"company\": \"KING Company\",\n        \"total\": 1\n    },\n    {\n        \"company\": \"Kingfisher plc\",\n        \"total\": 1\n    },\n    {\n        \"company\": \"Kraaft\",\n        \"total\": 1\n    },\n    {\n        \"company\": \"Lottomatica\",\n        \"total\": 1\n    },\n    {\n        \"company\": \"Lottomatica Group\",\n        \"total\": 1\n    },\n    {\n        \"company\": \"Lowell Group\",\n        \"total\": 1\n    },\n    {\n        \"company\": \"Mantu\",\n        \"total\": 1\n    },\n    {\n        \"company\": \"MatchGuru\",\n        \"total\": 1\n    },\n    {\n        \"company\": \"Mavriq\",\n        \"total\": 1\n    },\n    {\n        \"company\": \"MC Engineering\",\n        \"total\": 1\n    },\n    {\n        \"company\": \"Mirumee Software\",\n        \"total\": 1\n    },\n    {\n        \"company\": \"MSC Cruises\",\n        \"total\": 1\n    },\n    {\n        \"company\": \"Oerlikon Group\",\n        \"total\": 1\n    },\n    {\n        \"company\": \"agap2 Italia\",\n        \"total\": 1\n    },\n    {\n        \"company\": \"Poppi Technologies\",\n        \"total\": 1\n    },\n    {\n        \"company\": \"PRADA\",\n        \"total\": 1\n    },\n    {\n        \"company\": \"Randstad Enterprise Italia\",\n        \"total\": 1\n    },\n    {\n        \"company\": \"Renewi\",\n        \"total\": 1\n    },\n    {\n        \"company\": \"Risorse SpA\",\n        \"total\": 1\n    },\n    {\n        \"company\": \"S&P Global\",\n        \"total\": 1\n    },\n    {\n        \"company\": \"Satispay\",\n        \"total\": 1\n    },\n    {\n        \"company\": \"SCALO\",\n        \"total\": 1\n    },\n    {\n        \"company\": \"SDG Group\",\n        \"total\": 1\n    },\n    {\n        \"company\": \"Second Window\",\n        \"total\": 1\n    },\n    {\n        \"company\": \"Selection 4.0\",\n        \"total\": 1\n    },\n    {\n        \"company\": \"Shape It\",\n        \"total\": 1\n    },\n    {\n        \"company\": \"Software Inside\",\n        \"total\": 1\n    },\n    {\n        \"company\": \"Solvism\",\n        \"total\": 1\n    },\n    {\n        \"company\": \"Srijan: Now Material\",\n        \"total\": 1\n    },\n    {\n        \"company\": \"TalentHub Solutions\",\n        \"total\": 1\n    },\n    {\n        \"company\": \"Tata Consultancy Services\",\n        \"total\": 1\n    },\n    {\n        \"company\": \"TechBiz Global\",\n        \"total\": 1\n    },\n    {\n        \"company\": \"Telepass\",\n        \"total\": 1\n    },\n    {\n        \"company\": \"Tesco Technology\",\n        \"total\": 1\n    },\n    {\n        \"company\": \"Timing HRM\",\n        \"total\": 1\n    },\n    {\n        \"company\": \"Vaillant Group Business Services\",\n        \"total\": 1\n    },\n    {\n        \"company\": \"Vatix Holdings Limited\",\n        \"total\": 1\n    },\n    {\n        \"company\": \"Verlag C.H.BECK\",\n        \"total\": 1\n    },\n    {\n        \"company\": \"workidentity GmbH\",\n        \"total\": 1\n    },\n    {\n        \"company\": \"Würth Italia\",\n        \"total\": 1\n    },\n    {\n        \"company\": \"OpenEconomics\",\n        \"total\": 1\n    },\n    {\n        \"company\": \"Amaris Consulting\",\n        \"total\": 1\n    },\n    {\n        \"company\": \"Antal Sp. z o.o.\",\n        \"total\": 1\n    },\n    {\n        \"company\": \"BAM\",\n        \"total\": 1\n    },\n    {\n        \"company\": \"Beasy4BIZ\",\n        \"total\": 1\n    },\n    {\n        \"company\": \"Bhblasted\",\n        \"total\": 1\n    },\n    {\n        \"company\": \"Cerved\",\n        \"total\": 1\n    },\n    {\n        \"company\": \"Cerved Group SpA\",\n        \"total\": 1\n    },\n    {\n        \"company\": \"Cofinpro AG\",\n        \"total\": 1\n    },\n    {\n        \"company\": \"CRAON S.R.L.\",\n        \"total\": 1\n    },\n    {\n        \"company\": \"Data Giants\",\n        \"total\": 1\n    },\n    {\n        \"company\": \"Devapo\",\n        \"total\": 1\n    },\n    {\n        \"company\": \"Eligo Recruitment\",\n        \"total\": 1\n    },\n    {\n        \"company\": \"eLogic Digital Company\",\n        \"total\": 1\n    },\n    {\n        \"company\": \"Engineering Group\",\n        \"total\": 1\n    },\n    {\n        \"company\": \"Ennova Research\",\n        \"total\": 1\n    },\n    {\n        \"company\": \"F.I.S. - Fabbrica Italiana Sintetici S.p.A.\",\n        \"total\": 1\n    },\n    {\n        \"company\": \"Factorial\",\n        \"total\": 1\n    },\n    {\n        \"company\": \"Fedegari Group\",\n        \"total\": 1\n    },\n    {\n        \"company\": \"Gemeente Amsterdam\",\n        \"total\": 1\n    },\n    {\n        \"company\": \"Generali\",\n        \"total\": 1\n    },\n    {\n        \"company\": \"Gi Group S.p.A\",\n        \"total\": 1\n    },\n    {\n        \"company\": \"Globant\",\n        \"total\": 1\n    },\n    {\n        \"company\": \"Goldner GmbH\",\n        \"total\": 1\n    },\n    {\n        \"company\": \"Gruppo MOL\",\n        \"total\": 1\n    },\n    {\n        \"company\": \"HCLTech\",\n        \"total\": 1\n    },\n    {\n        \"company\": \"Ideal Match\",\n        \"total\": 1\n    },\n    {\n        \"company\": \"INFOPLUS TECHNOLOGIES\",\n        \"total\": 1\n    },\n    {\n        \"company\": \"Integri\",\n        \"total\": 1\n    },\n    {\n        \"company\": \"ISCS\",\n        \"total\": 1\n    },\n    {\n        \"company\": \"ISCS srl\",\n        \"total\": 1\n    },\n    {\n        \"company\": \"IT.COR Srl\",\n        \"total\": 1\n    },\n    {\n        \"company\": \"Italgas\",\n        \"total\": 1\n    }\n]"
+				}
+			]
+		},
+		{
+			"name": "top offre salaire",
+			"request": {
+				"method": "GET",
+				"header": []
+			},
+			"response": [
+				{
+					"name": "New Request",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": "http://localhost:8000/api/v1/joboffers/best_salary/"
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Date",
+							"value": "Fri, 04 Jul 2025 12:17:19 GMT"
+						},
+						{
+							"key": "Server",
+							"value": "WSGIServer/0.2 CPython/3.12.6"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Vary",
+							"value": "Accept"
+						},
+						{
+							"key": "Allow",
+							"value": "OPTIONS, GET"
+						},
+						{
+							"key": "X-Frame-Options",
+							"value": "DENY"
+						},
+						{
+							"key": "Content-Length",
+							"value": "886"
+						},
+						{
+							"key": "X-Content-Type-Options",
+							"value": "nosniff"
+						},
+						{
+							"key": "Referrer-Policy",
+							"value": "same-origin"
+						},
+						{
+							"key": "Cross-Origin-Opener-Policy",
+							"value": "same-origin"
+						}
+					],
+					"cookie": [],
+					"body": "[\n    {\n        \"job_title\": \"Python Tech Lead\",\n        \"company\": \"in4ge sp. z o.o.\",\n        \"salary_max\": 396000\n    },\n    {\n        \"job_title\": \"Python Tech Lead\",\n        \"company\": \"in4ge sp. z o.o.\",\n        \"salary_max\": 396000\n    },\n    {\n        \"job_title\": \"Architekt ds Automatyzacji AI\",\n        \"company\": \"Europharma Alliance Sp. z o.o.\",\n        \"salary_max\": 396000\n    },\n    {\n        \"job_title\": \"Python Tech Lead\",\n        \"company\": \"in4ge sp. z o.o.\",\n        \"salary_max\": 396000\n    },\n    {\n        \"job_title\": \"Python Tech Lead\",\n        \"company\": \"in4ge sp. z o.o.\",\n        \"salary_max\": 396000\n    },\n    {\n        \"job_title\": \"Python Tech Lead\",\n        \"company\": \"in4ge sp. z o.o.\",\n        \"salary_max\": 396000\n    },\n    {\n        \"job_title\": \"Data Scientist\",\n        \"company\": \"Kevin Edward\",\n        \"salary_max\": 384000\n    },\n    {\n        \"job_title\": \"Senior Cloud Backend Engineer\",\n        \"company\": \"Intent\",\n        \"salary_max\": 362880\n    },\n    {\n        \"job_title\": \"Senior Machine Learning Engineer\",\n        \"company\": \"ReSpo.Vision\",\n        \"salary_max\": 360000\n    },\n    {\n        \"job_title\": \"Machine Learning Engineer\",\n        \"company\": \"in4ge sp. z o.o.\",\n        \"salary_max\": 360000\n    }\n]"
+				}
+			]
+		},
+		{
+			"name": "salaire par region",
+			"request": {
+				"method": "GET",
+				"header": []
+			},
+			"response": [
+				{
+					"name": "New Request",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8000/api/v1/joboffers/salary_by_region/?title=data engineer",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"v1",
+								"joboffers",
+								"salary_by_region",
+								""
+							],
+							"query": [
+								{
+									"key": "title",
+									"value": "data engineer"
+								}
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Date",
+							"value": "Fri, 04 Jul 2025 12:17:24 GMT"
+						},
+						{
+							"key": "Server",
+							"value": "WSGIServer/0.2 CPython/3.12.6"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Vary",
+							"value": "Accept"
+						},
+						{
+							"key": "Allow",
+							"value": "OPTIONS, GET"
+						},
+						{
+							"key": "X-Frame-Options",
+							"value": "DENY"
+						},
+						{
+							"key": "Content-Length",
+							"value": "7783"
+						},
+						{
+							"key": "X-Content-Type-Options",
+							"value": "nosniff"
+						},
+						{
+							"key": "Referrer-Policy",
+							"value": "same-origin"
+						},
+						{
+							"key": "Cross-Origin-Opener-Policy",
+							"value": "same-origin"
+						}
+					],
+					"cookie": [],
+					"body": "[\n    {\n        \"location\": \"Polska\",\n        \"avg_salary\": 336000\n    },\n    {\n        \"location\": \"Gdańsk, Trójmiasto\",\n        \"avg_salary\": 301840\n    },\n    {\n        \"location\": \"Olsztyn, warmińsko-mazurskie\",\n        \"avg_salary\": 300000\n    },\n    {\n        \"location\": \"Szczecin, zachodniopomorskie\",\n        \"avg_salary\": 300000\n    },\n    {\n        \"location\": \"Białystok, podlaskie\",\n        \"avg_salary\": 300000\n    },\n    {\n        \"location\": \"Łódź, łódzkie\",\n        \"avg_salary\": 300000\n    },\n    {\n        \"location\": \"Lublin, lubelskie\",\n        \"avg_salary\": 300000\n    },\n    {\n        \"location\": \"Warszawa, mazowieckie\",\n        \"avg_salary\": 294951.6\n    },\n    {\n        \"location\": \"Wrocław, dolnośląskie\",\n        \"avg_salary\": 290496\n    },\n    {\n        \"location\": \"Poznań, wielkopolskie\",\n        \"avg_salary\": 282480\n    },\n    {\n        \"location\": \"Kraków, małopolskie\",\n        \"avg_salary\": 266568\n    },\n    {\n        \"location\": \"Katowice, śląskie\",\n        \"avg_salary\": 261120\n    },\n    {\n        \"location\": \"Holzgerlingen, Böblingen (Kreis)\",\n        \"avg_salary\": 96000\n    },\n    {\n        \"location\": \"Deutschland\",\n        \"avg_salary\": 90000\n    },\n    {\n        \"location\": \"Hammerbrook, Hamburg\",\n        \"avg_salary\": 90000\n    },\n    {\n        \"location\": \"Hof, Nordsachsen (Kreis)\",\n        \"avg_salary\": 90000\n    },\n    {\n        \"location\": \"Odijk, Bunnik\",\n        \"avg_salary\": 82800\n    },\n    {\n        \"location\": \"Amsterdam, Noord-Holland\",\n        \"avg_salary\": 82344\n    },\n    {\n        \"location\": \"2ème Arrondissement, Paris\",\n        \"avg_salary\": 80000\n    },\n    {\n        \"location\": \"Rijsenhout, Haarlemmermeer\",\n        \"avg_salary\": 79200\n    },\n    {\n        \"location\": \"Eindhoven, Noord-Brabant\",\n        \"avg_salary\": 76800\n    },\n    {\n        \"location\": \"Oudwijk, Utrecht\",\n        \"avg_salary\": 75000\n    },\n    {\n        \"location\": \"Hoofddorp, Haarlemmermeer\",\n        \"avg_salary\": 74400\n    },\n    {\n        \"location\": \"Rotterdam, Zuid-Holland\",\n        \"avg_salary\": 72000\n    },\n    {\n        \"location\": \"Provincia di Sassari, Sardegna\",\n        \"avg_salary\": 70000\n    },\n    {\n        \"location\": \"Albano Laziale, Provincia di Roma\",\n        \"avg_salary\": 70000\n    },\n    {\n        \"location\": \"Alessandria, Provincia di Alessandria\",\n        \"avg_salary\": 70000\n    },\n    {\n        \"location\": \"Belluno, Provincia di Belluno\",\n        \"avg_salary\": 70000\n    },\n    {\n        \"location\": \"Bologna, Provincia di Bologna\",\n        \"avg_salary\": 70000\n    },\n    {\n        \"location\": \"Bolzano, Provincia di Bolzano\",\n        \"avg_salary\": 70000\n    },\n    {\n        \"location\": \"Brugherio, Provincia di Monza e Brianza\",\n        \"avg_salary\": 70000\n    },\n    {\n        \"location\": \"Capurso, Provincia di Bari\",\n        \"avg_salary\": 70000\n    },\n    {\n        \"location\": \"Carpiano, Provincia di Milano\",\n        \"avg_salary\": 70000\n    },\n    {\n        \"location\": \"Caserta, Provincia di Caserta\",\n        \"avg_salary\": 70000\n    },\n    {\n        \"location\": \"Chieti, Provincia di Chieti\",\n        \"avg_salary\": 70000\n    },\n    {\n        \"location\": \"Egna, Provincia di Bolzano\",\n        \"avg_salary\": 70000\n    },\n    {\n        \"location\": \"Ferrara, Provincia di Ferrara\",\n        \"avg_salary\": 70000\n    },\n    {\n        \"location\": \"Italia\",\n        \"avg_salary\": 70000\n    },\n    {\n        \"location\": \"L'Aquila, Provincia dell'Aquila\",\n        \"avg_salary\": 70000\n    },\n    {\n        \"location\": \"La Spezia, Provincia della Spezia\",\n        \"avg_salary\": 70000\n    },\n    {\n        \"location\": \"Liguria, Italia\",\n        \"avg_salary\": 70000\n    },\n    {\n        \"location\": \"Lombardia, Italia\",\n        \"avg_salary\": 70000\n    },\n    {\n        \"location\": \"Provincia di Roma, Lazio\",\n        \"avg_salary\": 70000\n    },\n    {\n        \"location\": \"Provincia di Siena, Toscana\",\n        \"avg_salary\": 70000\n    },\n    {\n        \"location\": \"Provincia di Torino, Piemonte\",\n        \"avg_salary\": 70000\n    },\n    {\n        \"location\": \"Provincia di Varese, Lombardia\",\n        \"avg_salary\": 70000\n    },\n    {\n        \"location\": \"Provincia di Venezia, Veneto\",\n        \"avg_salary\": 70000\n    },\n    {\n        \"location\": \"Provincia di Vercelli, Piemonte\",\n        \"avg_salary\": 70000\n    },\n    {\n        \"location\": \"Puglia, Italia\",\n        \"avg_salary\": 70000\n    },\n    {\n        \"location\": \"Reggio Emilia, Provincia di Reggio Emilia\",\n        \"avg_salary\": 70000\n    },\n    {\n        \"location\": \"Rimini, Provincia di Rimini\",\n        \"avg_salary\": 70000\n    },\n    {\n        \"location\": \"Robecchetto con Induno, Provincia di Milano\",\n        \"avg_salary\": 70000\n    },\n    {\n        \"location\": \"Rovigo, Provincia di Rovigo\",\n        \"avg_salary\": 70000\n    },\n    {\n        \"location\": \"Salerno, Provincia di Salerno\",\n        \"avg_salary\": 70000\n    },\n    {\n        \"location\": \"Savona, Provincia di Savona\",\n        \"avg_salary\": 70000\n    },\n    {\n        \"location\": \"Teramo, Provincia di Teramo\",\n        \"avg_salary\": 70000\n    },\n    {\n        \"location\": \"Terni, Provincia di Terni\",\n        \"avg_salary\": 70000\n    },\n    {\n        \"location\": \"Trentino-Alto Adige, Italia\",\n        \"avg_salary\": 70000\n    },\n    {\n        \"location\": \"Trento, Provincia di Trento\",\n        \"avg_salary\": 70000\n    },\n    {\n        \"location\": \"Udine, Provincia di Udine\",\n        \"avg_salary\": 70000\n    },\n    {\n        \"location\": \"Verona, Provincia di Verona\",\n        \"avg_salary\": 70000\n    },\n    {\n        \"location\": \"Vicenza, Provincia di Vicenza\",\n        \"avg_salary\": 70000\n    },\n    {\n        \"location\": \"Monza, Provincia di Monza e Brianza\",\n        \"avg_salary\": 70000\n    },\n    {\n        \"location\": \"None, Provincia di Torino\",\n        \"avg_salary\": 70000\n    },\n    {\n        \"location\": \"Padova, Provincia di Padova\",\n        \"avg_salary\": 70000\n    },\n    {\n        \"location\": \"Parma, Provincia di Parma\",\n        \"avg_salary\": 70000\n    },\n    {\n        \"location\": \"Perugia, Provincia di Perugia\",\n        \"avg_salary\": 70000\n    },\n    {\n        \"location\": \"Pescara, Provincia di Pescara\",\n        \"avg_salary\": 70000\n    },\n    {\n        \"location\": \"Piemonte, Italia\",\n        \"avg_salary\": 70000\n    },\n    {\n        \"location\": \"Pordenone, Provincia di Pordenone\",\n        \"avg_salary\": 70000\n    },\n    {\n        \"location\": \"Prato, Provincia di Prato\",\n        \"avg_salary\": 70000\n    },\n    {\n        \"location\": \"Provincia di Ancona, Marche\",\n        \"avg_salary\": 70000\n    },\n    {\n        \"location\": \"Provincia di Arezzo, Toscana\",\n        \"avg_salary\": 70000\n    },\n    {\n        \"location\": \"Provincia di Ascoli Piceno, Marche\",\n        \"avg_salary\": 70000\n    },\n    {\n        \"location\": \"Provincia di Asti, Piemonte\",\n        \"avg_salary\": 70000\n    },\n    {\n        \"location\": \"Provincia di Bari, Puglia\",\n        \"avg_salary\": 70000\n    },\n    {\n        \"location\": \"Provincia di Bergamo, Lombardia\",\n        \"avg_salary\": 70000\n    },\n    {\n        \"location\": \"Provincia di Biella, Piemonte\",\n        \"avg_salary\": 70000\n    },\n    {\n        \"location\": \"Provincia di Brescia, Lombardia\",\n        \"avg_salary\": 70000\n    },\n    {\n        \"location\": \"Provincia di Cagliari, Sardegna\",\n        \"avg_salary\": 70000\n    },\n    {\n        \"location\": \"Provincia di Catania, Sicilia\",\n        \"avg_salary\": 70000\n    },\n    {\n        \"location\": \"Provincia di Como, Lombardia\",\n        \"avg_salary\": 70000\n    },\n    {\n        \"location\": \"Provincia di Cremona, Lombardia\",\n        \"avg_salary\": 70000\n    },\n    {\n        \"location\": \"Provincia di Cuneo, Piemonte\",\n        \"avg_salary\": 70000\n    },\n    {\n        \"location\": \"Provincia di Firenze, Toscana\",\n        \"avg_salary\": 70000\n    },\n    {\n        \"location\": \"Provincia di Frosinone, Lazio\",\n        \"avg_salary\": 70000\n    },\n    {\n        \"location\": \"Provincia di Genova, Liguria\",\n        \"avg_salary\": 70000\n    },\n    {\n        \"location\": \"Provincia di Latina, Lazio\",\n        \"avg_salary\": 70000\n    },\n    {\n        \"location\": \"Provincia di Lecce, Puglia\",\n        \"avg_salary\": 70000\n    },\n    {\n        \"location\": \"Provincia di Lecco, Lombardia\",\n        \"avg_salary\": 70000\n    },\n    {\n        \"location\": \"Provincia di Livorno, Toscana\",\n        \"avg_salary\": 70000\n    },\n    {\n        \"location\": \"Provincia di Lodi, Lombardia\",\n        \"avg_salary\": 70000\n    },\n    {\n        \"location\": \"Provincia di Lucca, Toscana\",\n        \"avg_salary\": 70000\n    },\n    {\n        \"location\": \"Provincia di Macerata, Marche\",\n        \"avg_salary\": 70000\n    },\n    {\n        \"location\": \"Provincia di Mantova, Lombardia\",\n        \"avg_salary\": 70000\n    },\n    {\n        \"location\": \"Provincia di Milano, Lombardia\",\n        \"avg_salary\": 70000\n    },\n    {\n        \"location\": \"Provincia di Modena, Emilia-Romagna\",\n        \"avg_salary\": 70000\n    },\n    {\n        \"location\": \"Provincia di Napoli, Campania\",\n        \"avg_salary\": 70000\n    },\n    {\n        \"location\": \"Provincia di Novara, Piemonte\",\n        \"avg_salary\": 70000\n    },\n    {\n        \"location\": \"Provincia di Palermo, Sicilia\",\n        \"avg_salary\": 70000\n    },\n    {\n        \"location\": \"Provincia di Pavia, Lombardia\",\n        \"avg_salary\": 70000\n    },\n    {\n        \"location\": \"Provincia di Pisa, Toscana\",\n        \"avg_salary\": 70000\n    },\n    {\n        \"location\": \"Provincia di Pistoia, Toscana\",\n        \"avg_salary\": 70000\n    },\n    {\n        \"location\": \"Provincia di Ravenna, Emilia-Romagna\",\n        \"avg_salary\": 70000\n    },\n    {\n        \"location\": \"Utrecht, Provincie Utrecht\",\n        \"avg_salary\": 68256\n    },\n    {\n        \"location\": \"Nederland\",\n        \"avg_salary\": 68000\n    },\n    {\n        \"location\": \"Binnenstad, Amsterdam\",\n        \"avg_salary\": 63000\n    },\n    {\n        \"location\": \"Oost, Amsterdam\",\n        \"avg_salary\": 60000\n    },\n    {\n        \"location\": \"Stadskern, Amersfoort\",\n        \"avg_salary\": 60000\n    },\n    {\n        \"location\": \"Berlin, Deutschland\",\n        \"avg_salary\": 60000\n    },\n    {\n        \"location\": \"Cromvoirt, Vught\",\n        \"avg_salary\": 60000\n    },\n    {\n        \"location\": \"Soest, Provincie Utrecht\",\n        \"avg_salary\": 60000\n    },\n    {\n        \"location\": \"Mitte, Berlin\",\n        \"avg_salary\": 57500\n    },\n    {\n        \"location\": \"Linz, Oberösterreich\",\n        \"avg_salary\": 57500\n    },\n    {\n        \"location\": \"Wien, Österreich\",\n        \"avg_salary\": 54757\n    },\n    {\n        \"location\": \"Apeldoorn, Gelderland\",\n        \"avg_salary\": 52980\n    },\n    {\n        \"location\": \"La-Madeleine, Lille\",\n        \"avg_salary\": 50000\n    },\n    {\n        \"location\": \"Leidschendam, Leidschendam-Voorburg\",\n        \"avg_salary\": 48000\n    },\n    {\n        \"location\": \"Sant Adrià de Besòs, Barcelona\",\n        \"avg_salary\": 37000\n    },\n    {\n        \"location\": \"España\",\n        \"avg_salary\": 15033.333333333334\n    },\n    {\n        \"location\": \"Graz-Umgebung, Steiermark\",\n        \"avg_salary\": 4500\n    },\n    {\n        \"location\": \"Den Haag, Zuid-Holland\",\n        \"avg_salary\": 1680\n    },\n    {\n        \"location\": \"Barcelona\",\n        \"avg_salary\": 800\n    },\n    {\n        \"location\": \"Rhône, Auvergne-Rhône-Alpes\",\n        \"avg_salary\": 400\n    }\n]"
+				}
+			]
+		}
+	]
+}
