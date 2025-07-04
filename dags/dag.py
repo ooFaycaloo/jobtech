@@ -36,8 +36,8 @@ urls = [
 ]
 
 # Dossier temporaire pour stocker les fichiers CSV intermédiaires
-OUTPUT_DIR = "/home/fboubekri/data_challenge/output"
-FINAL_OUTPUT = "/home/fboubekri/data_challenge/output/all_jobs.csv"
+OUTPUT_DIR = "/talent_insight/output"
+FINAL_OUTPUT = "/talent_insight/output/all_jobs.csv"
 os.makedirs(OUTPUT_DIR, exist_ok=True)
 
 # Configuration DAG
@@ -51,12 +51,12 @@ default_args = {
 
 def run_adzuna_scraping():
     offers = fetch_adzuna_offers()
-    save_offers_to_csv(offers, "/home/fboubekri/data_challenge/output/adzuna_multi_country.csv")
+    save_offers_to_csv(offers, "/talent_insight/output/adzuna_multi_country.csv")
 
 with DAG(
     dag_id='multi_url_scraping_glassdoor',
     default_args=default_args,
-    schedule_interval=None,
+    schedule_interval='@daily',  # ✅ Exécution quotidienne
     catchup=False,
     max_active_runs=1,
     params={},  # ✅ Ajouté pour éviter l'erreur
@@ -100,7 +100,7 @@ with DAG(
     task_insert_adzuna_to_mongo = PythonOperator(
     task_id='insert_adzuna_to_mongodb',
         python_callable=lambda: insert_csv_to_mongodb(
-            "/home/fboubekri/data_challenge/output/adzuna_multi_country.csv", 
+            "/talent_insight/output/adzuna_multi_country.csv", 
             "adzuna_jobs"
         ),
 )
@@ -108,7 +108,7 @@ with DAG(
     task_insert_github_to_mongo = PythonOperator(
         task_id='insert_github_to_mongodb',
         python_callable=lambda: insert_csv_to_mongodb(
-            "/home/fboubekri/data_challenge/output/github_trending.csv", 
+            "/talent_insight/output/github_trending.csv", 
             "github_trending"
         ),
 )
@@ -120,7 +120,7 @@ with DAG(
     task_insert_meteojob_to_mongo = PythonOperator(
         task_id='insert_meteojob_to_mongodb',
         python_callable=lambda: insert_csv_to_mongodb(
-            "/home/fboubekri/data_challenge/output/meteojob.csv", 
+            "/talent_insight/output/meteojob.csv", 
             "meteojob"
         ),
 )
@@ -139,7 +139,7 @@ with DAG(
     task_insert_google_trend_to_mongo = PythonOperator(
         task_id='insert_google_trend_to_mongodb',
         python_callable=lambda: insert_csv_to_mongodb(
-            "/home/fboubekri/data_challenge/output/google_trend.csv", 
+            "/talent_insight/output/google_trend.csv", 
             "google_trend"
         ),
     )
@@ -147,15 +147,15 @@ with DAG(
     task_insert_stepstone_jobs_to_mongo = PythonOperator(
         task_id='insert_stepsstone_jobs_to_mongodb',
         python_callable=lambda: insert_csv_to_mongodb(
-            "/home/fboubekri/data_challenge/output/stepstone_jobs.csv", 
+            "/talent_insight/output/stepstone_jobs.csv", 
             "stepstone_jobs"
         ),
     )
 
 
-    etl_task = PythonOperator(
-        task_id="transform_and_load_job_data",
-        python_callable=etl_job_data_to_postgres
+    task_transform_load = PythonOperator(
+        task_id='transform_and_load_data',
+        python_callable=transform_and_load_data,
     )
 
 
@@ -172,5 +172,5 @@ with DAG(
 
     task_insert_stepstone_jobs_to_mongo
 
-    etl_task
+    task_transform_load
 
