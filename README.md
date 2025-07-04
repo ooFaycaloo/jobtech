@@ -55,6 +55,111 @@ The `api_jobs` folder contains a Django-based REST API for interacting with job 
    ```
 3. Access the API at `http://localhost:8000`.
 
+### Authentication
+The API uses JWT Bearer Token authentication.
+
+1. Retrieve a token:
+   ```http
+   POST http://localhost:8000/api/token/
+   Body (JSON):
+   {
+     "username": "your_username",
+     "password": "your_password"
+   }
+   ```
+2. Use this token in subsequent requests:
+   ```
+   Authorization: Bearer <your_token>
+   ```
+
+## Endpoints to Test
+
+### Job Offers
+- List job offers:
+  ```
+  GET http://localhost:8000/api/v1/joboffers/
+  ```
+- Most demanded jobs:
+  ```
+  GET http://localhost:8000/api/v1/joboffers/most_demanded/
+  ```
+- Required skills for a job:
+  ```
+  GET http://localhost:8000/api/v1/joboffers/skills/?title=data%20engineer
+  ```
+- Offers by company:
+  ```
+  GET http://localhost:8000/api/v1/joboffers/by_company/?title=data%20engineer
+  ```
+- Best salary offers:
+  ```
+  GET http://localhost:8000/api/v1/joboffers/best_salary/
+  ```
+- Offers by region:
+  ```
+  GET http://localhost:8000/api/v1/joboffers/by_region/?title=data%20engineer
+  ```
+- Salary comparison by region:
+  ```
+  GET http://localhost:8000/api/v1/joboffers/salary_by_region/?title=data%20engineer
+  ```
+- Contract type distribution:
+  ```
+  GET http://localhost:8000/api/v1/joboffers/contracts/?title=data%20engineer
+  ```
+
+### Salary Data
+- Salary stats:
+  ```
+  GET http://localhost:8000/api/v1/salary/stats/?title=data%20engineer&country=france
+  ```
+- Top paid jobs by country:
+  ```
+  GET http://localhost:8000/api/v1/salary/top_jobs/?country=france
+  ```
+- Best countries for a job:
+  ```
+  GET http://localhost:8000/api/v1/salary/top_countries/?title=data%20engineer
+  ```
+- Salary trend over time:
+  ```
+  GET http://localhost:8000/api/v1/salary/trends/?title=data%20engineer
+  ```
+
+### Rating
+- Top rated companies:
+  ```
+  GET http://localhost:8000/api/v1/ratings/top/
+  ```
+- Average rating by company:
+  ```
+  GET http://localhost:8000/api/v1/ratings/average/
+  ```
+
+### Google Trends
+- Keyword growth:
+  ```
+  GET http://localhost:8000/api/v1/trends/growth/?keyword=python&country=france
+  ```
+- Peak interest date:
+  ```
+  GET http://localhost:8000/api/v1/trends/peak/?keyword=python
+  ```
+- Top countries for keyword:
+  ```
+  GET http://localhost:8000/api/v1/trends/top_countries/?keyword=python
+  ```
+
+### GitHub Projects
+- Top GitHub projects:
+  ```
+  GET http://localhost:8000/api/v1/github/top/
+  ```
+- Language popularity:
+  ```
+  GET http://localhost:8000/api/v1/github/languages/
+  ```
+
 ## How to Use
 
 ### Prerequisites
@@ -95,4 +200,3 @@ The `api_jobs` folder contains a Django-based REST API for interacting with job 
 ## Output
 - Scraped data is stored in the `output/` folder as CSV files then in the Mongodb as datalake.
 - Cleaned and processed data is inserted into PostgreSQL for further analysis.
-
