@@ -84,10 +84,31 @@ def insert_csv_to_mongodb(filepath, collection_name):
 
     try:
         df = pd.read_csv(filepath)
-        if not df.empty:
-            collection.insert_many(df.to_dict(orient="records"))
-            logger.info(f"✅ {len(df)} lignes insérées dans MongoDB : {collection_name}")
-        else:
+        if df.empty:
             logger.warning(f"⚠️ Le fichier {filepath} est vide.")
+            return
+
+        # Création de la clé unique pour chaque ligne
+        df["unique_key"] = df["title"].astype(str) + "_" + df["company"].astype(str) + "_" + df["location"].astype(str) + "_" + df["date_posted"].astype(str)
+
+        # Récupération des clés déjà existantes en base
+        existing_keys = set(
+            doc["unique_key"]
+            for doc in collection.find({}, {"unique_key": 1})
+        )
+
+        # Filtrage : on ne garde que les nouvelles lignes
+        new_df = df[~df["unique_key"].isin(existing_keys)]
+
+        if new_df.empty:
+            logger.info(f"✅ Aucune nouvelle donnée à insérer pour {collection_name}.")
+            return
+
+        # Insertion des lignes filtrées (sans le champ unique_key si tu ne veux pas le stocker)
+        records = new_df.to_dict(orient="records")
+        collection.insert_many(records)
+
+        logger.info(f"✅ {len(records)} nouvelles lignes insérées dans MongoDB : {collection_name}")
+
     except Exception as e:
         logger.error(f"❌ Erreur lors de l'insertion dans MongoDB ({collection_name}) : {e}")
